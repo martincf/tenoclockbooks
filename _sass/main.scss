@@ -1,0 +1,60 @@
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "mixins";
+
+$backgroundColor: #fffffe;
+$bodyColor: #222;
+$bodyFont: adobe-caslon-pro, serif;
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2em;
+  padding: 0 20%;
+  line-height: 1.5;
+
+}
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-weight: 500;
+}
+
+
+// -- temp styles -- //
+body {
+  text-align: center;
+}
+h1 {
+  margin: 15% 0 2em;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid #222;
+  display: inline-block;
+  line-height: 0.5;
+  padding: .5em .25em .1em;
+}
+h2 {
+  border-top: 1px solid #ddd;
+  padding-top: 2em;
+  font-size: 2.5em;
+  margin: 2em 0 1em;
+}
+p {
+  margin: 0 0 .5em;
+}
+a {
+  text-decoration: underline;
+}
+main img {
+  border: 1px solid #ddd;
+  display: block;
+  margin: 2em 0;
+}
+footer {
+  margin: 100px 0;
+}
