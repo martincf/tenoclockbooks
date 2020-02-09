@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: 500; }
 
 body { text-align: center; }
 
-h1 { margin: 15% 0 2em; font-size: 1.1em; letter-spacing: 1px; font-weight: 700; text-transform: uppercase; border: 1px solid #222; display: inline-block; line-height: 0.5; padding: .5em .25em .1em; }
+h1 { margin: 15% 0 2em; font-size: 1.1em; letter-spacing: 1px; font-weight: 700; text-transform: uppercase; border: 1px solid #333; display: inline-block; line-height: 0.5; padding: .5em .25em .1em; }
 
 h2 { border-top: 1px solid #ddd; padding-top: 2em; font-size: 2.5em; margin: 2em 0 1em; }
 
