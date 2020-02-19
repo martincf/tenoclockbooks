@@ -70,7 +70,12 @@ main img {
   margin: 75px 0;
 }
 footer {
-  margin: 100px 0;
+  margin: 100px 0 50px;
+}
+.poweredby {
+  img {
+    max-width: 128px;
+  }
 }
 .error {
   margin: 0 50px;
