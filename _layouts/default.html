@@ -3,7 +3,16 @@
     <main>
       <h1 class="logo"><img class="title--logo" src="{{ p.url | prepend: site.baseurl }}/assets/images/logo-tenoclockbooks.png" alt="Ten O'Clock Books" /></h1>
       {{ content }}
-      {% include stripe.html %}
+
+      {% if page.shipping == true %}
+
+        {% include stripe.html %}
+
+      {% else %}
+
+      {% include stripe_noshipping.html %}
+
+      {% endif %}
 
   </main>
   {% include footer.html %}

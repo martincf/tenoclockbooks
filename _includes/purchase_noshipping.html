@@ -1,0 +1,9 @@
+<section class="purchase">
+      {% for item in site.data.books %} <!-- Get everything in the books file -->
+        <h3 class="purchase--heading">{{ item.title }} is available to pre-order now</h3>
+        <h4 class="purchase--price"> £{{ item.unit_price }} plus shipping (limited edition of 450).</h4>
+        <p class="purchase--action noshipping"><button id="checkout-button-sku_GlTIUGlb1v1Db2" role="link" class="buy">Buy now</button> (delivered in person!)</p>
+      {% endfor %}
+      <p class="purchase--deliveryest">An exclusive Artist Edition (boxed with a beautiful signed print) is also available. <a href="mailto:hello@tenoclockbooks.com">Email</a> for details.
+Publication is estimated to be ready April 2020.</p>
+</section>

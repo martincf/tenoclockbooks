@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
     <meta charset="utf-8">
-    <title>Ten O'Clock Books – Fisherwomen - Ten O'Clock Books</title>
+    <title>Fisherwomen – no shipping required - Ten O'Clock Books</title>
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/adc4uvy.css">
   </head>
@@ -32,62 +32,29 @@
 
       
 
-        <script src="https://js.stripe.com/v3"></script>
+      <script src="https://js.stripe.com/v3"></script>
 <section class="purchase">
        <!-- Get everything in the books file -->
         <h3 class="purchase--heading">Fisherwomen is available to pre-order now</h3>
         <h4 class="purchase--price"> £18.00 plus shipping (limited edition of 450).</h4>
-        <p class="purchase--action"><button id="checkout-button-sku_GlS4daIzAFmr6x" role="link" class="buy">UK shipping – buy now</button> plus £5 shipping</p>
-        <p class="purchase--action"><button id="checkout-button-sku_GlSJ1jKhNAq9Ch" role="link" class="buy">Int. shipping – buy now</button> plus £14.95 shipping</p>
+        <p class="purchase--action noshipping"><button id="checkout-button-sku_GlTIUGlb1v1Db2" role="link" class="buy">Buy now</button> (delivered in person!)</p>
       
       <p class="purchase--deliveryest">An exclusive Artist Edition (boxed with a beautiful signed print) is also available. <a href="mailto:hello@tenoclockbooks.com">Email</a> for details.
-Publication is estimated to ship in April 2020.</p>
+Publication is estimated to be ready April 2020.</p>
 </section>
 
 <div id="error-message" class="error"></div>
-<!-- UK -->
+<!-- NO SHIPPING -->
 <script>
 (function() {
   var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_GlS4daIzAFmr6x');
+  var checkoutButton = document.getElementById('checkout-button-sku_GlTIUGlb1v1Db2');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_GlS4daIzAFmr6x', quantity: 1}],
-
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://www.tenoclockbooks.com/success',
-      cancelUrl: 'https://www.tenoclockbooks.com/canceled',
-      billingAddressCollection: 'required',
-    })
-    .then(function (result) {
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
-<!-- International -->
-<script>
-(function() {
-  var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
-
-  var checkoutButton = document.getElementById('checkout-button-sku_GlSJ1jKhNAq9Ch');
-  checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-      items: [{sku: 'sku_GlSJ1jKhNAq9Ch', quantity: 1}],
+      items: [{sku: 'sku_GlTIUGlb1v1Db2', quantity: 1}],
 
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after

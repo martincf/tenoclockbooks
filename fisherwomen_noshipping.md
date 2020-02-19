@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Ten O'Clock Books – Fisherwomen"
-shipping: true
+title: "Fisherwomen – no shipping required"
+shipping: false
 ---
 
 ## _Fisherwomen_ by Craig Easton
