@@ -1,13 +1,7 @@
 <script src="https://js.stripe.com/v3"></script>
-<section class="purchase">
-      {% for item in site.data.books %} <!-- Get everything in the books file -->
-        <h3 class="purchase--heading">Purchase the {{ item.title }} book</h3>
-        <h4 class="purchase--price"> £{{ item.unit_price }} plus shipping</h4>
-        <p class="purchase--action"><button id="checkout-button-sku_GlOAeVsxcgFBex" role="link" class="buy">UK shipping – buy now</button> plus £5 shipping</p>
-        <p class="purchase--action"><button id="checkout-button-sku_GlP6MnoJuzggI3" role="link" class="buy">Int. shipping – buy now</button> plus £14.95 shipping</p>
-      {% endfor %}
-      <p class="purchase--deliveryest">Publication is estimated to ship in April 2020.</p>
-</section>
+
+{% include purchase.html %}
+
 
 <div id="error-message"></div>
 <script>
