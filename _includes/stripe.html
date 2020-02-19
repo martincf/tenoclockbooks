@@ -1,24 +1,30 @@
 <script src="https://js.stripe.com/v3"></script>
-
 {% include purchase.html %}
-
-
 <div id="error-message"></div>
+<!-- UK -->
 <script>
 (function() {
-  var stripe = Stripe('pk_test_WJGgYhC3uLXBeI5eSi4nrDiq00GwWHHHHo');
+  var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_GlOAeVsxcgFBex');
+  var checkoutButton = document.getElementById('checkout-button-sku_GlS4daIzAFmr6x');
   checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_GlOAeVsxcgFBex', quantity: 1}],
+      items: [{sku: 'sku_GlS4daIzAFmr6x', quantity: 1}],
 
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
       successUrl: 'https://www.tenoclockbooks.com/success',
       cancelUrl: 'https://www.tenoclockbooks.com/canceled',
-
     })
     .then(function (result) {
       if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
         var displayError = document.getElementById('error-message');
         displayError.textContent = result.error.message;
       }
@@ -26,21 +32,30 @@
   });
 })();
 </script>
+<!-- International -->
 <script>
 (function() {
-  var stripe = Stripe('pk_test_WJGgYhC3uLXBeI5eSi4nrDiq00GwWHHHHo');
+  var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_GlP6MnoJuzggI3');
+  var checkoutButton = document.getElementById('checkout-button-sku_GlSJ1jKhNAq9Ch');
   checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_GlP6MnoJuzggI3', quantity: 1}],
+      items: [{sku: 'sku_GlSJ1jKhNAq9Ch', quantity: 1}],
 
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
       successUrl: 'https://www.tenoclockbooks.com/success',
       cancelUrl: 'https://www.tenoclockbooks.com/canceled',
-
     })
     .then(function (result) {
       if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
         var displayError = document.getElementById('error-message');
         displayError.textContent = result.error.message;
       }
