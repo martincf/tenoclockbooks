@@ -20,6 +20,7 @@
       // https://stripe.com/docs/payments/checkout/fulfillment
       successUrl: 'https://www.tenoclockbooks.com/success',
       cancelUrl: 'https://www.tenoclockbooks.com/canceled',
+      billingAddressCollection: 'required',
     })
     .then(function (result) {
       if (result.error) {

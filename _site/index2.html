@@ -61,6 +61,7 @@ Publication is estimated to ship in April 2020.</p>
       // https://stripe.com/docs/payments/checkout/fulfillment
       successUrl: 'https://www.tenoclockbooks.com/success',
       cancelUrl: 'https://www.tenoclockbooks.com/canceled',
+      billingAddressCollection: 'required',
     })
     .then(function (result) {
       if (result.error) {
