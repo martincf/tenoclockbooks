@@ -9,4 +9,4 @@ __A twenty-four page 11&quot; &times; 15&quot; portfolio publication__, _Fisherw
 
 Following the historic route of the old herring fleet from Shetland to Great Yarmouth, the work presents intimate colour portraits of former and present-day fisherwomen alongside exquisite large format black & white landscapes. Personal testimonies weave a compelling tale in the history of British women at work.
 
-![Fisherwomen spread](/assets/images/fisherwomen_5.png)
+![Fisherwomen spread](/assets/images/layouts.jpg)
