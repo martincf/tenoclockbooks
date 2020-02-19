@@ -1,5 +1,5 @@
 ---
-layout: default_old
+layout: default
 title: "Ten O'Clock Books"
 ---
 

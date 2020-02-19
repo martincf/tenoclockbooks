@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158103972-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-158103972-1');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+    <meta charset="utf-8">
+    <title>Ten O'Clock Books - Ten O'Clock Books</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/adc4uvy.css">
+  </head>
+
+  <body>
+    <main>
+      <h1 class="logo"><img class="title--logo" src="/assets/images/logo-tenoclockbooks.png" alt="Ten O'Clock Books" /></h1>
+      <h2 id="fisherwomen-by-craig-easton"><em>Fisherwomen</em> by Craig Easton</h2>
+
+<p><strong>A twenty-four page 11" × 15" portfolio publication</strong>, <em>Fisherwomen</em> showcases images from a long-term project exploring the traditional and contemporary importance of women to the fishing industry.</p>
+
+<p>Following the historic route of the old herring fleet from Shetland to Great Yarmouth, the work presents intimate colour portraits of former and present-day fisherwomen alongside exquisite large format black &amp; white landscapes. Personal testimonies weave a compelling tale in the history of British women at work.</p>
+
+<p><img src="/assets/images/fisherwomen_5.png" alt="Fisherwomen spread" /></p>
+
+      <script src="https://js.stripe.com/v3"></script>
+<section class="purchase">
+       <!-- Get everything in the books file -->
+        <h3 class="purchase--heading">Purchase the Fisherwomen book</h3>
+        <h4 class="purchase--price"> £18.00 + shipping</h4>
+        <p class="purchase--action"><button id="checkout-button-sku_GlOAeVsxcgFBex" role="link" class="buy">UK shipping – buy now</button> (+£5 shipping)</p>
+        <p class="purchase--action"><button id="checkout-button-sku_GlP6MnoJuzggI3" role="link" class="buy">Int. shipping – buy now</button> (+£14.95 shipping)</p>
+      
+      <p class="purchase--deliveryest">Publication is estimated to ship in April 2020.</p>
+</section>
+
+<div id="error-message"></div>
+<script>
+(function() {
+  var stripe = Stripe('pk_test_WJGgYhC3uLXBeI5eSi4nrDiq00GwWHHHHo');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_GlOAeVsxcgFBex');
+  checkoutButton.addEventListener('click', function () {
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GlOAeVsxcgFBex', quantity: 1}],
+
+      successUrl: 'https://www.tenoclockbooks.com/success',
+      cancelUrl: 'https://www.tenoclockbooks.com/canceled',
+
+    })
+    .then(function (result) {
+      if (result.error) {
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+<script>
+(function() {
+  var stripe = Stripe('pk_test_WJGgYhC3uLXBeI5eSi4nrDiq00GwWHHHHo');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_GlP6MnoJuzggI3');
+  checkoutButton.addEventListener('click', function () {
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GlP6MnoJuzggI3', quantity: 1}],
+
+      successUrl: 'https://www.tenoclockbooks.com/success',
+      cancelUrl: 'https://www.tenoclockbooks.com/canceled',
+
+    })
+    .then(function (result) {
+      if (result.error) {
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+
+
+  </main>
+  <footer>
+  <p>2020 &copy; Ten O'Clock Books. Email <a href="hello@tenoclockbooks.com">hello@tenoclockbooks.com</a>.</p>
+</footer>
+
+  </body>
+</html>

@@ -1,7 +1,8 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
-        "mixins";
+        "mixins",
+        "purchase";
 
 $backgroundColor: #fffffe;
 $bodyColor: #222;
@@ -31,25 +32,22 @@ body {
   }
 
 }
-h1 {
-  margin: 15% 0 2em;
+.title {
   font-size: 1.1em;
-  letter-spacing: 1px;
-  font-weight: 700;
-  text-transform: uppercase;
-  // border: 1px solid #333;
+  border: none;
   display: inline-block;
-  line-height: 0.5;
-  padding: .5em .25em .1em;
-  @include mq(small) {
-    font-size: 1em;
-  }
+}
+.title--logo {
+  max-width: 225px;
+  border: none;
+  display: block;
+  margin: 100px auto 75px;
 }
 h2 {
   border-top: 1px solid #ddd;
-  padding-top: 2em;
+  padding-top: .5em;
   font-size: 2.5em;
-  margin: 2em 0 1em;
+  margin: 1em 0 1em;
   @include mq(small) {
     line-height: 1.2;
     font-size: 1.75em;
@@ -58,7 +56,12 @@ h2 {
 }
 p {
   margin: 0 0 .5em;
+  word-spacing: -30%;
+  strong {
+    font-weight: 700;
+  }
 }
+
 a {
   text-decoration: underline;
 }
