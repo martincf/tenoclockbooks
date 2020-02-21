@@ -2,6 +2,8 @@
       {% for item in site.data.books %} <!-- Get everything in the books file -->
         <h3 class="purchase--heading">{{ item.title }} – Artist's Edition is available to pre-order now</h3>
         <h4 class="purchase--price"> £{{ item.unit_price_special }} plus shipping (limited edition of 50).</h4>
-        <p class="purchase--action noshipping"><button id="checkout-button-sku_Gm7SWsQW0UaOch" role="link" class="buy">Buy now</button></p>
+        <p class="purchase--action"><button id="checkout-button-sku_Gm7SWsQW0UaOch" role="link" class="buy">UK shipping – buy now</button> plus £5 shipping</p>
+        <p class="purchase--action"><button id="checkout-button-sku_Gm8Hh4C81u9Lq7" role="link" class="buy">Int. shipping – buy now</button> plus £14.95 shipping</p>
+
       {% endfor %}
 </section>
