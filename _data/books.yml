@@ -1,6 +1,7 @@
 - title: "Fisherwomen"
   units: 500
   unit_price: "18.00"
+  unit_price_special: "175.00"
   p_and_p:
     uk_post: "5.00"
     us_post: "14.95"

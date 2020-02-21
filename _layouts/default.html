@@ -4,13 +4,17 @@
       <h1 class="logo"><a href="/"><img class="title--logo" src="{{ p.url | prepend: site.baseurl }}/assets/images/logo-tenoclockbooks.png" alt="Ten O'Clock Books" /></a></h1>
       {{ content }}
 
-      {% if page.shipping == true %}
+      {% if page.shipping == true and page.tags contains "general" %}
 
         {% include stripe.html %}
 
-      {% else %}
+      {% elsif page.shipping == true and page.tags contains "artistsedition" %}
 
-      {% include stripe_noshipping.html %}
+        {% include stripe_artistsedition.html %}
+
+      {% elsif page.shipping == false %}
+
+        {% include stripe_noshipping.html %}
 
       {% endif %}
 

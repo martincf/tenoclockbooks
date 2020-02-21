@@ -1,0 +1,7 @@
+<section class="purchase">
+      {% for item in site.data.books %} <!-- Get everything in the books file -->
+        <h3 class="purchase--heading">{{ item.title }} – Artist's Edition is available to pre-order now</h3>
+        <h4 class="purchase--price"> £{{ item.unit_price_special }} plus shipping (limited edition of 50).</h4>
+        <p class="purchase--action noshipping"><button id="checkout-button-sku_Gm7SWsQW0UaOch" role="link" class="buy">Buy now</button></p>
+      {% endfor %}
+</section>

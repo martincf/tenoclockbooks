@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
     <meta charset="utf-8">
-    <title>Fisherwomen – no shipping required - Ten O'Clock Books</title>
+    <title>Fisherwomen – Artist's Edition - Ten O'Clock Books</title>
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/adc4uvy.css">
   </head>
@@ -23,11 +23,17 @@
       <h1 class="logo"><a href="/"><img class="title--logo" src="/assets/images/logo-tenoclockbooks.png" alt="Ten O'Clock Books" /></a></h1>
       <h2 id="fisherwomen-by-craig-easton"><em>Fisherwomen</em> by Craig Easton</h2>
 
-<p><strong>A twenty-four page 11" × 15" portfolio publication</strong>, <em>Fisherwomen</em> showcases images from a long-term project exploring the traditional and contemporary importance of women to the fishing industry.</p>
+<h3 id="special-boxed-artist-edition--only-50-available">Special boxed Artist Edition  (only 50 available)</h3>
 
-<p>Following the historic route of the old herring fleet from Shetland to Great Yarmouth, the work presents intimate colour portraits of former and present-day fisherwomen alongside exquisite large format black &amp; white landscapes. Combined with personal testimonies, the photographs weave a compelling tale of a unique phenomenon in the history of British women at work.</p>
+<p>The 24 page portfolio comes (as the name suggests) in a bespoke embossed box along with with an original 12" × 16" print of <em>The hands that gut the herring</em> (see attached) and a signed &amp; numbered certificate of authenticity.</p>
 
-<p><img src="/assets/images/layouts.jpg" alt="Fisherwomen spread" /></p>
+<p><strong>£175 + delivery</strong></p>
+
+<p>We’d be delighted if you would like to pre-order a special edition – please email <a href="hello@tenoclockbooks.com">hello@tenoclockbooks.com</a> directly and we’ll send you further details.</p>
+
+<p><img src="/assets/images/hands.jpg" alt="Fisherwomen spread" />
+<img src="/assets/images/box.jpg" alt="Fisherwomen spread" />
+<img src="/assets/images/layouts.jpg" alt="Fisherwomen spread" /></p>
 
 
       
@@ -35,26 +41,24 @@
         <script src="https://js.stripe.com/v3"></script>
 <section class="purchase">
        <!-- Get everything in the books file -->
-        <h3 class="purchase--heading">Fisherwomen is available to pre-order now</h3>
-        <h4 class="purchase--price"> £18.00 plus shipping (limited edition of 450).</h4>
-        <p class="purchase--action noshipping"><button id="checkout-button-sku_GlTIUGlb1v1Db2" role="link" class="buy">Buy now</button> (delivered in person!)</p>
+        <h3 class="purchase--heading">Fisherwomen – Artist's Edition is available to pre-order now</h3>
+        <h4 class="purchase--price"> £175.00 plus shipping (limited edition of 50).</h4>
+        <p class="purchase--action noshipping"><button id="checkout-button-sku_Gm7SWsQW0UaOch" role="link" class="buy">Buy now</button></p>
       
-      <p class="purchase--deliveryest">An exclusive Artist Edition (boxed with a beautiful signed print) is also available. <a href="mailto:hello@tenoclockbooks.com">Email</a> for details.
-Publication is estimated to be ready April 2020.</p>
 </section>
 
 <div id="error-message" class="error"></div>
-<!-- NO SHIPPING -->
+<!-- ARTIST'S EDITION -->
 <script>
 (function() {
   var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_GlTIUGlb1v1Db2');
+  var checkoutButton = document.getElementById('checkout-button-sku_Gm7SWsQW0UaOch');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_GlTIUGlb1v1Db2', quantity: 1}],
+      items: [{sku: 'sku_Gm7SWsQW0UaOch', quantity: 1}],
 
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after
