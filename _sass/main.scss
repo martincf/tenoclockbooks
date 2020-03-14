@@ -7,6 +7,7 @@
 $backgroundColor: #fffffe;
 $bodyColor: #222;
 $bodyFont: adobe-caslon-pro, serif;
+$red: #ed1a35;
 
 body {
   background: $backgroundColor;
@@ -77,15 +78,53 @@ main img {
   display: block;
   margin: 75px 0;
 }
+main p {
+  text-align: justify;
+  word-spacing: -2px;
+  @include mq(narrow) {
+    text-align: left;
+  }
+}
 footer {
   margin: 100px 0 50px;
+}
+.footer--copyright {
+  margin: 50px 0;
 }
 .poweredby {
   img {
     max-width: 128px;
+    margin: 25px auto;
   }
 }
 .error {
   margin: 0 50px;
   font-weight: 700;
+}
+//Mailchimp Form
+.mc_signup {
+  h2 {
+    font-size: 1em;
+    font-weight: 700;
+  }
+}
+.mc_signup--elements * {
+  display: inline-block;
+  color: $red;
+  input {
+    background-color: #fff;
+    border: 1px solid $red;
+    padding: .5em .5em .25em;
+    font-size: 1em;
+    font-family: $bodyFont;
+    line-height: 1;
+    @include mq(narrow) {
+      display: block;
+      margin: .5em 0;
+    }
+  }
+  .button {
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }

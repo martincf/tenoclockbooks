@@ -73,10 +73,26 @@ a { text-decoration: underline; }
 
 main img { display: block; margin: 75px 0; }
 
+main p { text-align: justify; word-spacing: -2px; }
+
+@media (max-width: 480px) { main p { text-align: left; } }
+
 footer { margin: 100px 0 50px; }
 
-.poweredby img { max-width: 128px; }
+.footer--copyright { margin: 50px 0; }
+
+.poweredby img { max-width: 128px; margin: 25px auto; }
 
 .error { margin: 0 50px; font-weight: 700; }
+
+.mc_signup h2 { font-size: 1em; font-weight: 700; }
+
+.mc_signup--elements * { display: inline-block; color: #ed1a35; }
+
+.mc_signup--elements * input { background-color: #fff; border: 1px solid #ed1a35; padding: .5em .5em .25em; font-size: 1em; font-family: adobe-caslon-pro, serif; line-height: 1; }
+
+@media (max-width: 480px) { .mc_signup--elements * input { display: block; margin: .5em 0; } }
+
+.mc_signup--elements * .button { border-radius: 5px; cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */
