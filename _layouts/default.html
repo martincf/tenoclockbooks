@@ -2,6 +2,16 @@
   <body>
     <main>
       <h1 class="logo"><a href="/"><img class="title--logo" src="{{ p.url | prepend: site.baseurl }}/assets/images/logo-tenoclockbooks.png" alt="Ten O'Clock Books" /></a></h1>
+
+      <div class="alert">
+        <h1>Coronavirus update</h1>
+        <p>As you are aware, the Coronavirus has affected nearly every part of our lives.
+          Our first publication, <em>Fisherwomen</em> by Craig Easton is imminent, but the production
+          has been delayed to ensure anyone working on the project is not put at risk.</p>
+        <p>Of course, being a start-up book publisher, we would be grateful for any further
+          pre-orders at this time. Stay safe.</p>
+      </div>
+
       {{ content }}
 
       {% if page.shipping == true and page.tags contains "general" %}

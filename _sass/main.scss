@@ -128,3 +128,19 @@ footer {
     cursor: pointer;
   }
 }
+.alert {
+  margin: 25px 0;
+  padding: 25px 25px;
+  border: 3px double $red;
+  background-color: lighten($red,47%);
+  h1 {
+    margin: 0 0 1em;
+    text-transform: uppercase;
+    color: darken($red,10%);
+    font-weight: 700;
+    font-size: .8em;
+    letter-spacing: 2px;
+  }
+  p {
+  }
+}
