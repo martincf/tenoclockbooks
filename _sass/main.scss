@@ -129,7 +129,7 @@ footer {
   }
 }
 .alert {
-  margin: 25px 0;
+  margin: 25px 0 50px;
   padding: 25px 25px;
   border: 3px double $red;
   background-color: lighten($red,47%);
@@ -142,5 +142,29 @@ footer {
     letter-spacing: 2px;
   }
   p {
+  }
+}
+.follow--header {
+  font-size: .7em;
+  text-transform: uppercase;
+  border-top: none;
+  padding-top: 0;
+  letter-spacing: 1px;
+  margin: 25px 0 0;
+}
+.follow--links {
+  margin: 25px 0;
+}
+.follow--links li {
+  display: inline-block;
+  max-height: 48px;
+  margin: 0 5px;
+}
+.follow--icon {
+  max-height: 36px;
+  margin: 0;
+  @include transition();
+  &:hover {
+    transform: scale(1.05);
   }
 }

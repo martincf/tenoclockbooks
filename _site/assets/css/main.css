@@ -95,8 +95,18 @@ footer { margin: 100px 0 50px; }
 
 .mc_signup--elements * .button { border-radius: 5px; cursor: pointer; }
 
-.alert { margin: 25px 0; padding: 25px 25px; border: 3px double #ed1a35; background-color: #fef8f9; }
+.alert { margin: 25px 0 50px; padding: 25px 25px; border: 3px double #ed1a35; background-color: #fef8f9; }
 
 .alert h1 { margin: 0 0 1em; text-transform: uppercase; color: #c50f27; font-weight: 700; font-size: .8em; letter-spacing: 2px; }
+
+.follow--header { font-size: .7em; text-transform: uppercase; border-top: none; padding-top: 0; letter-spacing: 1px; margin: 25px 0 0; }
+
+.follow--links { margin: 25px 0; }
+
+.follow--links li { display: inline-block; max-height: 48px; margin: 0 5px; }
+
+.follow--icon { max-height: 36px; margin: 0; transition: all .2s ease-in-out; }
+
+.follow--icon:hover { transform: scale(1.05); }
 
 /*# sourceMappingURL=main.css.map */

@@ -12,6 +12,20 @@
           pre-orders at this time. Stay safe.</p>
       </div>
 
+      <section class="follow">
+        <h2 class="follow--header">Follow us</h2>
+        <ul class="follow--links">
+          <li>
+            <a href="https://www.instagram.com/tenoclockbooks">
+              <img class="follow--icon" src="{{ p.url | prepend: site.baseurl }}/assets/images/icon--instagram.png" alt="Instagram" /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/tenoclockbooks">
+              <img class="follow--icon" src="{{ p.url | prepend: site.baseurl }}/assets/images/icon--facebook.png" alt="Facebook" /></a>
+          </li>
+        </ul>
+      </section>
+      
       {{ content }}
 
       {% if page.shipping == true and page.tags contains "general" %}
