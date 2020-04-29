@@ -7,7 +7,7 @@ tags: product,standardedition
 
 ## _Fisherwomen_ by Craig Easton
 
-![Fisherwomen spread](/assets/images/layouts.jpg)
+![Fisherwomen spread](/assets/images/layouts_long.jpg)
 
 __A twenty-four page 11&quot; &times; 15&quot; portfolio publication__, _Fisherwomen_ showcases images from a long-term project exploring the traditional and contemporary importance of women to the fishing industry.
 
