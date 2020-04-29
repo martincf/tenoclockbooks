@@ -33,7 +33,9 @@
       </p>
 
       <section {% if page.tags contains "product" %} class="content-intro product" {% else %} class="content-intro product" {% endif %}>
+        <div class="content-intro--content">
       {{ content }}
+        </div>
       {% if page.shipping == false and page.tags contains "home" %}
         <div class="purchase--wrap">
           <button class="purchase-link"><a class="purchase-link--anchor" href="/fisherwomen_standard_edition">Standard edition</a></button>

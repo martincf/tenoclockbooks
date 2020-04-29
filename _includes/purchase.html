@@ -1,14 +1,20 @@
   <section class="purchase">
+    <h3 class="purchase--heading">Pre-order purchase</h3>
+    <div class="purchase-info">
       {% for item in site.data.books %} <!-- Get everything in the books file -->
-        <h3 class="purchase--heading">{{ item.title }} is available to pre-order now</h3>
-        <h4 class="purchase--price"> £{{ item.unit_price }} plus shipping (limited edition of 450).</h4>
-        <p class="purchase--action"><button id="checkout-button-sku_GlS4daIzAFmr6x" role="link" class="buy">UK shipping – buy now</button> plus £5 shipping</p>
-        <p class="purchase--action"><button id="checkout-button-sku_GlSJ1jKhNAq9Ch" role="link" class="buy">Int. shipping – buy now</button> plus £14.95 shipping</p>
+        <!-- <p class="purchase--price">{{ item.title }} is available to pre-order now</p> -->
+        <h4 class="purchase--price"><strong>£{{ item.unit_price }}</strong> plus shipping (limited edition of 450).</h4>
+        <p class="purchase--action"><button id="checkout-button-sku_GlS4daIzAFmr6x" role="link" class="buy">Buy now – UK <small>(plus £5 UK shipping)</small></button></p>
+        <p class="purchase--action"><button id="checkout-button-sku_GlSJ1jKhNAq9Ch" role="link" class="buy">Buy now – International <small>(plus £14.95 International shipping)</small></button></p>
       {% endfor %}
       <p class="poweredby">
         <img src="{{ p.url | prepend: site.baseurl }}/assets/images/powered_by_stripe@2x.png" alt="Payments powered by Stripe" />
       </p>
+    </div>
+    <aside class="purchase-meta">
       <p class="purchase--deliveryest">An exclusive <strong>Artist Edition</strong> (boxed with a beautiful signed print) is also <a href="/fisherwomen_artists_edition">available here</a>.</p>
-      <p>Publication is estimated to ship in April 2020.</p>
+      <p>Publication is estimated to ship in May-June 2020.</p>
+
+    </aside>
 </section>
 </div>

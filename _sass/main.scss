@@ -44,14 +44,34 @@ body {
   border: none;
   float: left;
   height: 50px;
+  @include mq(narrow) {
+    float: none;
+    height: auto;
+  }
 }
 .title--logo {
   max-width: 225px;
   border: none;
+  @include transition();
+  &:hover {
+    transform: scale(1.05);
+  }
+  @include mq(narrow) {
+    display: block;
+    margin: 0 auto;
+  }
 }
 .follow {
   float: right;
   height: 50px;
+  @include mq(narrow) {
+    vertical-align: middle;
+    float: none;
+    text-align: center;
+    display: block;
+    margin: 50px auto 0;
+    height: inherit;
+  }
 }
 .follow--header {
   font-size: .7em;
@@ -87,6 +107,9 @@ body {
   text-align: center;
   font-weight: 700;
   max-width: 100%;
+  @include mq(narrow) {
+    margin-top: 25px;
+  }
 }
 
 footer {

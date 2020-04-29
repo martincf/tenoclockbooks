@@ -1,7 +1,10 @@
-
+.content-intro--content {
+  @include cf();
+}
 h2 {
   // border-top: 1px solid #ddd;
   // padding-top: 1em;
+  text-align: center;
   font-family: $headerFont;
   font-size: 2.25em;
   // margin: 1em 0 1em;
@@ -12,6 +15,11 @@ h2 {
   @include mq(small) {
     line-height: 1.2;
     font-size: 1.75em;
+  }
+  @include mq(narrow) {
+    padding-top: 25px;
+    margin-bottom: 25px;
+    font-size: 2em;
   }
 }
 h3 {

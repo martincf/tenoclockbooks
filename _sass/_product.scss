@@ -1,11 +1,18 @@
 .product {
   max-width: 90%;
+  @include cf();
   h2 {
     text-align: center;
   }
-  > p img {
+  .content-intro--content > p img {
     float: left;
+    width: 50%;
     max-width: 480px;
     margin: 0 25px 25px 0;
+    @include mq(small) {
+      width: 100%;
+      margin: 25px 0;
+      max-width: 100%;
+    }
   }
 }
