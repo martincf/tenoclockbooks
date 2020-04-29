@@ -1,0 +1,11 @@
+.product {
+  max-width: 90%;
+  h2 {
+    text-align: center;
+  }
+  > p img {
+    float: left;
+    max-width: 480px;
+    margin: 0 25px 25px 0;
+  }
+}

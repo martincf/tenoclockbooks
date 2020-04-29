@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
     <meta charset="utf-8">
-    <title>Artist's Edition - Ten O'Clock Books</title>
+    <title>Standard Edition - Ten O'Clock Books</title>
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/adc4uvy.css">
   </head>
@@ -49,43 +49,48 @@
       </div> -->
 
       <p class="statement">
-        Artist's Edition
+        Standard Edition
       </p>
 
       <section  class="content-intro product" >
       <h2 id="fisherwomen-by-craig-easton"><em>Fisherwomen</em> by Craig Easton</h2>
 
-<p><img src="/assets/images/hands.jpg" alt="Fisherwomen spread" />
-<img src="/assets/images/box.jpg" alt="Fisherwomen spread" />
-<img src="/assets/images/layouts.jpg" alt="Fisherwomen spread" /></p>
+<p><img src="/assets/images/layouts.jpg" alt="Fisherwomen spread" /></p>
 
-<p>Limited to fifty editions, this twenty-four page portfolio comes in a bespoke embossed box along with with an original 12" × 16" print of <em>The hands that gut the herring</em> (see below) and a signed &amp; numbered certificate of authenticity.</p>
+<p><strong>A twenty-four page 11" × 15" portfolio publication</strong>, <em>Fisherwomen</em> showcases images from a long-term project exploring the traditional and contemporary importance of women to the fishing industry.</p>
+
+<p>Following the historic route of the old herring fleet from Shetland to Great Yarmouth, the work presents intimate colour portraits of former and present-day fisherwomen alongside exquisite large format black &amp; white landscapes. Combined with personal testimonies, the photographs weave a compelling tale of a unique phenomenon in the history of British women at work.</p>
 
       
 
         <script src="https://js.stripe.com/v3"></script>
-<section class="purchase">
+  <section class="purchase">
        <!-- Get everything in the books file -->
-        <h3 class="purchase--heading">Fisherwomen – Artist's Edition is available to pre-order now</h3>
-        <h4 class="purchase--price"> £175.00 plus shipping (limited edition of 50).</h4>
-        <p class="purchase--action"><button id="checkout-button-sku_Gm7SWsQW0UaOch" role="link" class="buy">UK shipping – buy now</button> plus £5 shipping</p>
-        <p class="purchase--action"><button id="checkout-button-sku_Gm8Hh4C81u9Lq7" role="link" class="buy">Int. shipping – buy now</button> plus £14.95 shipping</p>
-
+        <h3 class="purchase--heading">Fisherwomen is available to pre-order now</h3>
+        <h4 class="purchase--price"> £18.00 plus shipping (limited edition of 450).</h4>
+        <p class="purchase--action"><button id="checkout-button-sku_GlS4daIzAFmr6x" role="link" class="buy">UK shipping – buy now</button> plus £5 shipping</p>
+        <p class="purchase--action"><button id="checkout-button-sku_GlSJ1jKhNAq9Ch" role="link" class="buy">Int. shipping – buy now</button> plus £14.95 shipping</p>
       
+      <p class="poweredby">
+        <img src="/assets/images/powered_by_stripe@2x.png" alt="Payments powered by Stripe" />
+      </p>
+      <p class="purchase--deliveryest">An exclusive <strong>Artist Edition</strong> (boxed with a beautiful signed print) is also <a href="/fisherwomen_artists_edition">available here</a>.</p>
+      <p>Publication is estimated to ship in April 2020.</p>
 </section>
+</div>
 
 <div id="error-message" class="error"></div>
-<!-- ARTIST'S EDITION -->
+<!-- UK -->
 <script>
 (function() {
   var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_Gm7SWsQW0UaOch');
+  var checkoutButton = document.getElementById('checkout-button-sku_GlS4daIzAFmr6x');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_Gm7SWsQW0UaOch', quantity: 1}],
+      items: [{sku: 'sku_GlS4daIzAFmr6x', quantity: 1}],
 
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after
@@ -94,6 +99,7 @@
       // https://stripe.com/docs/payments/checkout/fulfillment
       successUrl: 'https://www.tenoclockbooks.com/thanks',
       cancelUrl: 'https://www.tenoclockbooks.com/canceled',
+      billingAddressCollection: 'required',
     })
     .then(function (result) {
       if (result.error) {
@@ -106,16 +112,17 @@
   });
 })();
 </script>
+<!-- International -->
 <script>
 (function() {
   var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_Gm8Hh4C81u9Lq7');
+  var checkoutButton = document.getElementById('checkout-button-sku_GlSJ1jKhNAq9Ch');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_Gm8Hh4C81u9Lq7', quantity: 1}],
+      items: [{sku: 'sku_GlSJ1jKhNAq9Ch', quantity: 1}],
 
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after

@@ -32,7 +32,7 @@
         {{ page.title }}
       </p>
 
-      <section class="content-intro">
+      <section {% if page.tags contains "product" %} class="content-intro product" {% else %} class="content-intro product" {% endif %}>
       {{ content }}
       {% if page.shipping == false and page.tags contains "home" %}
         <div class="purchase--wrap">

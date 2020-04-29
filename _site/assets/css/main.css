@@ -25,6 +25,34 @@ button { overflow: visible; font: inherit; cursor: pointer; letter-spacing: inhe
 
 img { max-width: 100%; height: auto; border: 0; }
 
+h2 { font-family: adobe-caslon-pro, serif; font-size: 2.25em; margin: 25px 0 50px; padding-top: 50px; }
+
+@media (max-width: 800px) { h2 { line-height: 1.2; font-size: 1.75em; } }
+
+h3 { font-weight: 500; font-size: 1.5em; }
+
+@media (max-width: 800px) { h3 { line-height: 1.2; font-size: 1.25em; margin: 0 0 .5em; } }
+
+p { margin: 0 0 .5em; word-spacing: -30%; }
+
+p strong { font-weight: 700; }
+
+a { text-decoration: underline; }
+
+.content-intro { max-width: 480px; margin: 0 auto; }
+
+.content-intro h3 img { display: block; width: 100%; max-width: 480px; margin: 50px 50px 50px 0; }
+
+main p { word-spacing: -2px; }
+
+@media (max-width: 480px) { main p { text-align: left; } }
+
+.product { max-width: 90%; }
+
+.product h2 { text-align: center; }
+
+.product > p img { float: left; max-width: 480px; margin: 0 25px 25px 0; }
+
 .purchase--wrap { margin: 25px auto; }
 
 .purchase--wrap:before, .purchase--wrap:after { content: " "; display: table; }
@@ -41,7 +69,7 @@ img { max-width: 100%; height: auto; border: 0; }
 
 .purchase-link--anchor { padding: .5em; display: block; color: #fff; font-weight: 700; text-decoration: none; }
 
-.purchase { text-align: left; display: inline-block; }
+.purchase { text-align: left; border-top: 12px solid #feeff1; margin: 25px auto; padding: 25px 0; }
 
 @media (max-width: 480px) { .purchase { text-align: center; } }
 
@@ -51,13 +79,15 @@ img { max-width: 100%; height: auto; border: 0; }
 
 @media (max-width: 480px) { .purchase--action { display: block; text-align: center; } }
 
-.purchase--deliveryest { font-size: .9em; font-style: italic; }
+.purchase--deliveryest { display: block; }
 
 .buy { background-color: black; color: white; display: inline-block; padding: 0.2em .5em 0; border-radius: 2px; min-width: 60%; transition: all .2s ease-in-out; }
 
 .buy:hover { transform: scale(1.03); background-color: #ed1a35; }
 
 @media (max-width: 480px) { .buy { display: block; margin: .5em auto; } }
+
+.poweredby img { max-width: 128px; margin: 25px auto; float: none; }
 
 .noshipping .buy { min-width: 30%; }
 
@@ -89,28 +119,6 @@ body { text-align: left; padding: 0 10%; }
 
 .statement { font-size: 1.5em; line-height: 1.2; color: #ed1a35; margin: 100px 0 0; text-align: center; font-weight: 700; max-width: 100%; }
 
-h2 { font-family: adobe-caslon-pro, serif; font-size: 2.25em; margin: 25px 0 50px; padding-top: 50px; }
-
-@media (max-width: 800px) { h2 { line-height: 1.2; font-size: 1.75em; } }
-
-h3 { font-weight: 500; font-size: 1.5em; }
-
-@media (max-width: 800px) { h3 { line-height: 1.2; font-size: 1.25em; margin: 0 0 .5em; } }
-
-p { margin: 0 0 .5em; word-spacing: -30%; }
-
-p strong { font-weight: 700; }
-
-a { text-decoration: underline; }
-
-.content-intro { max-width: 480px; margin: 0 auto; }
-
-.content-intro h3 img { display: block; width: 100%; max-width: 480px; margin: 50px 50px 50px 0; }
-
-main p { word-spacing: -2px; }
-
-@media (max-width: 480px) { main p { text-align: left; } }
-
 footer { margin: 50px auto 25px; border-top: 2px solid #ddd; }
 
 .footer--copyright { max-width: 640px; text-align: center; margin: 25px auto 25px; font-size: .8em; }
@@ -120,8 +128,6 @@ footer { margin: 50px auto 25px; border-top: 2px solid #ddd; }
 .logomark { max-width: 64px; position: fixed; right: 0; bottom: 0; z-index: 1000; transition: all .2s ease-in-out; }
 
 .logomark:hover { transform: scale(1.2); }
-
-.poweredby img { max-width: 128px; margin: 25px auto; }
 
 .error { margin: 0 50px; font-weight: 700; }
 
