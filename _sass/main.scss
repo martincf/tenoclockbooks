@@ -1,21 +1,22 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
+        "colors",
+        "typography",
         "mixins",
         "purchase";
 
-$backgroundColor: #fffffe;
-$bodyColor: #222;
-$bodyFont: adobe-caslon-pro, serif;
-$red: #ed1a35;
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: $backgroundColor;
   color: $bodyColor;
   font-family: $bodyFont;
   font-weight: 500;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.5;
 
 }
@@ -26,29 +27,77 @@ h1, h2, h3, h4, h5, h6, strong, b {
 
 // -- temp styles -- //
 body {
-  text-align: center;
-  padding: 0 25%;
+  text-align: left;
+  padding: 0 10%;
   @include mq(small) {
     padding: 0 5%;
   }
 
 }
+.header {
+  padding: 50px 0;
+  min-height: 50px;
+}
 .title {
-  font-size: 1.1em;
   border: none;
-  display: inline-block;
+  float: left;
+  height: 50px;
 }
 .title--logo {
   max-width: 225px;
   border: none;
-  display: block;
-  margin: 100px auto 75px;
 }
+.follow {
+  float: right;
+  height: 50px;
+}
+.follow--header {
+  font-size: .7em;
+  text-transform: uppercase;
+  border-top: none;
+  padding-top: 0;
+  letter-spacing: 1px;
+  // margin: 25px 0 0;
+  float: left;
+}
+.follow--links {
+  // margin: 25px 0;
+}
+.follow--links li {
+  display: inline-block;
+  max-height: 48px;
+  margin: 0 5px;
+}
+.follow--icon {
+  max-height: 36px;
+  margin: 0;
+  @include transition();
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.statement {
+  font-size: 1.5em;
+  line-height: 1.2;
+  color: $red;
+  margin: 100px 0 0;
+  text-align: center;
+  font-weight: 700;
+  max-width: 100%;
+
+}
+
 h2 {
-  border-top: 1px solid #ddd;
-  padding-top: 1em;
+  // border-top: 1px solid #ddd;
+  // padding-top: 1em;
+  font-family: $headerFont;
   font-size: 2.25em;
-  margin: 1em 0 1em;
+  // margin: 1em 0 1em;
+  // text-align: center;
+  // float: left;
+  margin: 25px 0 50px;
+  padding-top: 50px;
   @include mq(small) {
     line-height: 1.2;
     font-size: 1.75em;
@@ -74,22 +123,61 @@ p {
 a {
   text-decoration: underline;
 }
-main img {
-  display: block;
-  margin: 75px 0;
+.content {
+
 }
+.content-intro {
+  max-width: 480px;
+  margin:  0 auto;
+  h3 img {
+    display: block;
+    // margin: 0 auto 50px;
+    width: 100%;
+    max-width: 480px;
+    // border: 15px solid #eee;
+    // float: left;
+    margin: 50px 50px 50px 0;
+
+  }
+  p {
+
+  }
+}
+// main img {
+//   display: block;
+//   margin: 75px 0;
+// }
 main p {
-  text-align: justify;
+  // text-align: justify;
   word-spacing: -2px;
   @include mq(narrow) {
     text-align: left;
   }
 }
 footer {
-  margin: 100px 0 50px;
+  margin: 50px auto 25px;
+  border-top: 2px solid #ddd;
 }
 .footer--copyright {
-  margin: 50px 0;
+  max-width: 640px;
+  text-align: center;
+  margin: 25px auto 25px;
+  font-size: .8em;
+  @include mq(small) {
+    max-width: 80%;
+  }
+}
+.logomark {
+  max-width: 64px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  @include transition();
+  &:hover {
+    transform: scale(1.2);
+  }
+
 }
 .poweredby {
   img {
@@ -103,29 +191,66 @@ footer {
 }
 //Mailchimp Form
 .mc_signup {
+  text-align: center;
+  margin: 25px auto 0;
+  padding: 0;
   h2 {
     font-size: 1em;
     font-weight: 700;
+    display: inline-block;
+    margin: 0 1em 0 0;
+    padding-top: 0;
+    font-family: $bodyFont;
   }
+}
+.mc_signup--elements {
+  display: inline-block;
 }
 .mc_signup--elements * {
   display: inline-block;
   color: $red;
+  vertical-align: middle;
+
+  @include mq(small) {
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+  }
   input {
-    background-color: #fff;
+    background-color: lighten($red,45%);
     border: 1px solid $red;
+    border: none;
     padding: .5em .5em .25em;
     font-size: 1em;
     font-family: $bodyFont;
     line-height: 1;
-    @include mq(narrow) {
-      display: block;
-      margin: .5em 0;
+    color: $bodyColor;
+    &::placeholder {
+      color: lighten($red,25%);
     }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: lighten($red,25%);
+    }
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: lighten($red,25%);
+    }
+
   }
+  .clear {}
   .button {
-    border-radius: 5px;
+    color: $red;
+    background-color: #fff;
+    border: 1px solid $red;
+    font-weight: 700;
     cursor: pointer;
+    text-transform: uppercase;
+    font-size: .9em;
+    padding: .5em 1em .35em;
+    @include transition();
+    &:hover {
+      transform: scale(1.05);
+    }
+
   }
 }
 .alert {
@@ -142,29 +267,5 @@ footer {
     letter-spacing: 2px;
   }
   p {
-  }
-}
-.follow--header {
-  font-size: .7em;
-  text-transform: uppercase;
-  border-top: none;
-  padding-top: 0;
-  letter-spacing: 1px;
-  margin: 25px 0 0;
-}
-.follow--links {
-  margin: 25px 0;
-}
-.follow--links li {
-  display: inline-block;
-  max-height: 48px;
-  margin: 0 5px;
-}
-.follow--icon {
-  max-height: 36px;
-  margin: 0;
-  @include transition();
-  &:hover {
-    transform: scale(1.05);
   }
 }

@@ -3,6 +3,7 @@
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158103972-1"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -19,9 +20,25 @@
   </head>
 
   <body>
-    <main>
-      <h1 class="logo"><a href="/"><img class="title--logo" src="/assets/images/logo-tenoclockbooks.png" alt="Ten O'Clock Books" /></a></h1>
+    <main class="content">
+      <header class="header">
+        <h1 class="title"><a href="/"><img class="title--logo" src="/assets/images/logo-tenoclockbooks.png" alt="Ten O'Clock Books" /></a></h1>
+        <section class="follow">
+          <!-- <h2 class="follow--header">Follow us</h2> -->
+          <ul class="follow--links">
+            <li>
+              <a href="https://www.instagram.com/tenoclockbooks">
+                <img class="follow--icon" src="/assets/images/icon--instagram.png" alt="Instagram" /></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/tenoclockbooks">
+                <img class="follow--icon" src="/assets/images/icon--facebook.png" alt="Facebook" /></a>
+            </li>
+          </ul>
+        </section>
+      </header>
 
+<!--
       <div class="alert">
         <h1>Coronavirus update</h1>
         <p>As you are aware, the Coronavirus has affected nearly every part of our lives.
@@ -29,22 +46,13 @@
           has been delayed to ensure anyone working on the project is not put at risk.</p>
         <p>Of course, being a start-up book publisher, we would be grateful for any further
           pre-orders at this time. Stay safe.</p>
-      </div>
+      </div> -->
 
-      <section class="follow">
-        <h2 class="follow--header">Follow us</h2>
-        <ul class="follow--links">
-          <li>
-            <a href="https://www.instagram.com/tenoclockbooks">
-              <img class="follow--icon" src="/assets/images/icon--instagram.png" alt="Instagram" /></a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/tenoclockbooks">
-              <img class="follow--icon" src="/assets/images/icon--facebook.png" alt="Facebook" /></a>
-          </li>
-        </ul>
-      </section>
-      
+      <p class="statement">
+        Upcoming photo book available to pre-order
+      </p>
+
+      <section class="content-intro">
       <h2 id="fisherwomen-by-craig-easton"><em>Fisherwomen</em> by Craig Easton</h2>
 
 <h3 id="special-boxed-artist-edition">Special boxed Artist Edition</h3>
@@ -56,86 +64,16 @@
 <img src="/assets/images/layouts.jpg" alt="Fisherwomen spread" /></p>
 
 
-      
+      <div class="purchase--wrap">
+        <button class="purchase-link"><a class="purchase-link--anchor" href="">Standard edition</a></button>
+        <button class="purchase-link"><a class="purchase-link--anchor" href="">Artist edition</a></button>
+      </div>
 
-        <script src="https://js.stripe.com/v3"></script>
-<section class="purchase">
-       <!-- Get everything in the books file -->
-        <h3 class="purchase--heading">Fisherwomen – Artist's Edition is available to pre-order now</h3>
-        <h4 class="purchase--price"> £175.00 plus shipping (limited edition of 50).</h4>
-        <p class="purchase--action"><button id="checkout-button-sku_Gm7SWsQW0UaOch" role="link" class="buy">UK shipping – buy now</button> plus £5 shipping</p>
-        <p class="purchase--action"><button id="checkout-button-sku_Gm8Hh4C81u9Lq7" role="link" class="buy">Int. shipping – buy now</button> plus £14.95 shipping</p>
-
-      
-</section>
-
-<div id="error-message" class="error"></div>
-<!-- ARTIST'S EDITION -->
-<script>
-(function() {
-  var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
-
-  var checkoutButton = document.getElementById('checkout-button-sku_Gm7SWsQW0UaOch');
-  checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-      items: [{sku: 'sku_Gm7SWsQW0UaOch', quantity: 1}],
-
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://www.tenoclockbooks.com/thanks',
-      cancelUrl: 'https://www.tenoclockbooks.com/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
-<script>
-(function() {
-  var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
-
-  var checkoutButton = document.getElementById('checkout-button-sku_Gm8Hh4C81u9Lq7');
-  checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-      items: [{sku: 'sku_Gm8Hh4C81u9Lq7', quantity: 1}],
-
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://www.tenoclockbooks.com/thanks',
-      cancelUrl: 'https://www.tenoclockbooks.com/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
+      </section>
 
 
-      
 
-  </main>
+    </main>
 
 <!--End mc_embed_signup-->
   <footer>
@@ -143,12 +81,12 @@
 <div id="mc_embed_signup" class="mc_signup">
 <form action="https://tenoclockbooks.us19.list-manage.com/subscribe/post?u=af934924eff750dff65c59e9d&amp;id=7cb05098b3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
   <div id="mc_embed_signup_scroll">
-  	<h2>Email newsletter signup</h2>
-    <p>Receive news and updates about our publications.</p>
+  	<!-- <h2>Email newsletter signup</h2> -->
+    <!-- <p>Receive news and updates about our publications.</p> -->
     <div class="mc_signup--elements">
       <div class="mc-field-group">
-      	<label for="mce-EMAIL">Email address </label>
-      	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+      	<label for="mce-EMAIL">Email newsletter signup</label>
+      	<input type="email" value="" placeholder="Add email address" name="EMAIL" class="required email" id="mce-EMAIL">
       </div>
     	<div id="mce-responses" class="clear">
     		<div class="response" id="mce-error-response" style="display:none"></div>
@@ -164,8 +102,7 @@
 </form>
 </div>
 
-<p class="footer--copyright">2020 &copy; Ten O'Clock Books. Email <a href="hello@tenoclockbooks.com">hello@tenoclockbooks.com</a>.</p>
-
+<p class="footer--copyright"><a href="#"><img class="logomark" src="/assets/images/logomark.png" alt="Ten O'Clock Books" /></a>2020 &copy; Ten O'Clock Books. Email <a href="hello@tenoclockbooks.com">hello@tenoclockbooks.com</a>.</p>
 </footer>
 
   </body>
