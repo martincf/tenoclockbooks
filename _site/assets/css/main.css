@@ -161,7 +161,7 @@ body { text-align: left; padding: 0 10%; }
 
 @media (max-width: 480px) { .statement { margin-top: 25px; } }
 
-.statement + section > p { margin-top: 50px; text-align: center; }
+.statement + section > p { margin-top: 50px; }
 
 footer { margin: 50px auto 25px; border-top: 2px solid #ddd; }
 
