@@ -111,7 +111,10 @@ body {
     margin-top: 25px;
   }
 }
-
+.statement + section > p {
+  margin-top: 50px;
+  text-align: center;
+}
 footer {
   margin: 50px auto 25px;
   border-top: 2px solid #ddd;

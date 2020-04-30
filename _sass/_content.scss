@@ -2,14 +2,9 @@
   @include cf();
 }
 h2 {
-  // border-top: 1px solid #ddd;
-  // padding-top: 1em;
   text-align: center;
   font-family: $headerFont;
   font-size: 2.25em;
-  // margin: 1em 0 1em;
-  // text-align: center;
-  // float: left;
   margin: 25px 0 50px;
   padding-top: 50px;
   @include mq(small) {
@@ -65,7 +60,6 @@ a {
   }
 }
 main p {
-  // text-align: justify;
   word-spacing: -2px;
   @include mq(narrow) {
     text-align: left;
