@@ -36,19 +36,17 @@
         <div class="content-intro--content">
       {{ content }}
         </div>
-      {% if page.shipping == false and page.tags contains "home" %}
-        <div class="purchase--wrap">
-          <button class="purchase-link"><a class="purchase-link--anchor" href="/fisherwomen_standard_edition">Standard edition</a></button>
-          <button class="purchase-link"><a class="purchase-link--anchor" href="/fisherwomen_artists_edition">Artist edition</a></button>
-        </div>
+      {% if page.shipping == false and page.tags contains "noshipping" %}
 
-      {% elsif page.shipping == true and page.tags contains "standardedition" %}
+      {% include purchase_noshipping.html %}
 
-        {% include stripe.html %}
+      {% elsif page.shipping == true and page.tags contains "portfolioedition" %}
+
+        {% include purchase_portfolioedition.html %}
 
       {% elsif page.shipping == true and page.tags contains "artistsedition" %}
 
-        {% include stripe_artistsedition.html %}
+        {% include purchase_artistsedition.html %}
 
       {% endif %}
 

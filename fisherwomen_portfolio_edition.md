@@ -2,7 +2,7 @@
 layout: product
 title: "Portfolio Edition"
 shipping: true
-tags: product,standardedition
+tags: product,portfolioedition
 ---
 
 ## _Fisherwomen_ by Craig Easton

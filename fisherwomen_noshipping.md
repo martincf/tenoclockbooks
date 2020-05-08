@@ -1,13 +1,18 @@
 ---
-layout: default
+layout: product
 title: "Fisherwomen – no shipping required"
 shipping: false
+tags: noshipping
 ---
 
 ## _Fisherwomen_ by Craig Easton
 
-__A twenty-four page 11&quot; &times; 15&quot; portfolio publication__, _Fisherwomen_ showcases images from a long-term project exploring the traditional and contemporary importance of women to the fishing industry.
+![Fisherwomen spread](/assets/images/layouts_long.jpg)
 
-Following the historic route of the old herring fleet from Shetland to Great Yarmouth, the work presents intimate colour portraits of former and present-day fisherwomen alongside exquisite large format black & white landscapes. Combined with personal testimonies, the photographs weave a compelling tale of a unique phenomenon in the history of British women at work.
+__A twenty-four page 11&quot; &times; 15&quot; portfolio publication__, Fisherwomen is both an exploration and a celebration of the long tradition of women in fishing, presented in three parts: _Contemporary Portraits_, _Heritage_ and _Journey_.
 
-![Fisherwomen spread](/assets/images/layouts.jpg)
+This bespoke portfolio made on _Mohawk Superfine_ paper is presented in large format to showcase the exquisite detail and the emotional connection that Easton has captured with his 10 &times; 8 camera. The pictures are married with transcribed conversations outlining the extraordinary stories that the fisherwomen have to tell.
+
+Limited edition of 500, each individually signed and numbered by the artist.
+
+Each copy comes with _Fisherwomen & Photography_, a specially commissioned A5 four page insert written by Rachel Nordstrum, Photographic Collections Manager at the University of St Andrews.

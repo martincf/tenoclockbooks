@@ -1,9 +1,57 @@
 <section class="purchase">
+  <h3 class="purchase--heading">Pre-order purchase Artist Edition</h3>
+    <div class="purchase-info">
       {% for item in site.data.books %} <!-- Get everything in the books file -->
-        <h3 class="purchase--heading">{{ item.title }} is available to pre-order now</h3>
-        <h4 class="purchase--price"> £{{ item.unit_price }} plus shipping (limited edition of 450).</h4>
-        <p class="purchase--action noshipping"><button id="checkout-button-sku_GlTIUGlb1v1Db2" role="link" class="buy">Buy now</button> (delivered in person!)</p>
+      <h4 class="purchase--price"> £{{ item.unit_price }}</h4>
+        <p class="purchase--action noshipping"><button id="checkout-button-sku_GlTIUGlb1v1Db2" role="link" class="buy">Buy now<small>(Will be delivered in person!)</small></button> </p>
+
       {% endfor %}
-      <p class="purchase--deliveryest">An exclusive Artist Edition (boxed with a beautiful signed print) is also available. <a href="mailto:hello@tenoclockbooks.com">Email</a> for details.
-Publication is estimated to be ready April 2020.</p>
+      <p class="poweredby">
+        <img src="{{ p.url | prepend: site.baseurl }}/assets/images/powered_by_stripe@2x.png" alt="Payments powered by Stripe" />
+      </p>
+    </div>
+    <aside class="purchase-meta">
+      <h4 class="purchase-meta--header">Further info</h4>
+      <p class="purchase--deliveryest">An exclusive <strong>Artists Edition</strong> (boxed with a beautiful signed print) is also <a href="/fisherwomen_artists_edition">available here</a>.</p>
+      <p>Publication is estimated to ship in May-June 2020.</p>
+
+    </aside>
+
 </section>
+
+
+
+
+
+<div id="error-message" class="error"></div>
+<!-- NO SHIPPING -->
+<script>
+(function() {
+  var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_GlTIUGlb1v1Db2');
+  checkoutButton.addEventListener('mouseup', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GlTIUGlb1v1Db2', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: 'https://www.tenoclockbooks.com/thanks',
+      cancelUrl: 'https://www.tenoclockbooks.com/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
