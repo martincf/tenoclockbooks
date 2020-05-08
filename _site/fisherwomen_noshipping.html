@@ -11,6 +11,7 @@
 
       gtag('config', 'UA-158103972-1');
     </script>
+    <script src="https://js.stripe.com/v3"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
     <meta charset="utf-8">
@@ -52,14 +53,81 @@
         Fisherwomen – no shipping required
       </p>
 
-      <section class="content-intro">
+      <section  class="content-intro product" >
+        <div class="content-intro--content">
       <h2 id="fisherwomen-by-craig-easton"><em>Fisherwomen</em> by Craig Easton</h2>
 
-<p><strong>A twenty-four page 11" × 15" portfolio publication</strong>, <em>Fisherwomen</em> showcases images from a long-term project exploring the traditional and contemporary importance of women to the fishing industry.</p>
+<p><img src="/assets/images/layouts_long.jpg" alt="Fisherwomen spread" /></p>
 
-<p>Following the historic route of the old herring fleet from Shetland to Great Yarmouth, the work presents intimate colour portraits of former and present-day fisherwomen alongside exquisite large format black &amp; white landscapes. Combined with personal testimonies, the photographs weave a compelling tale of a unique phenomenon in the history of British women at work.</p>
+<p><strong>A twenty-four page 11" × 15" portfolio publication</strong>, Fisherwomen is both an exploration and a celebration of the long tradition of women in fishing, presented in three parts: <em>Contemporary Portraits</em>, <em>Heritage</em> and <em>Journey</em>.</p>
 
-<p><img src="/assets/images/layouts.jpg" alt="Fisherwomen spread" /></p>
+<p>This bespoke portfolio made on <em>Mohawk Superfine</em> paper is presented in large format to showcase the exquisite detail and the emotional connection that Easton has captured with his 10 × 8 camera. The pictures are married with transcribed conversations outlining the extraordinary stories that the fisherwomen have to tell.</p>
+
+<p>Limited edition of 500, each individually signed and numbered by the artist.</p>
+
+<p>Each copy comes with <em>Fisherwomen &amp; Photography</em>, a specially commissioned A5 four page insert written by Rachel Nordstrum, Photographic Collections Manager at the University of St Andrews.</p>
+
+        </div>
+      
+
+      <section class="purchase">
+  <h3 class="purchase--heading">Pre-order purchase Artist Edition</h3>
+    <div class="purchase-info">
+       <!-- Get everything in the books file -->
+      <h4 class="purchase--price"> £18.00</h4>
+        <p class="purchase--action noshipping"><button id="checkout-button-sku_GlTIUGlb1v1Db2" role="link" class="buy">Buy now<small>(Will be delivered in person!)</small></button> </p>
+
+      
+      <p class="poweredby">
+        <img src="/assets/images/powered_by_stripe@2x.png" alt="Payments powered by Stripe" />
+      </p>
+    </div>
+    <aside class="purchase-meta">
+      <h4 class="purchase-meta--header">Further info</h4>
+      <p class="purchase--deliveryest">An exclusive <strong>Artists Edition</strong> (boxed with a beautiful signed print) is also <a href="/fisherwomen_artists_edition">available here</a>.</p>
+      <p>Publication is estimated to ship in May-June 2020.</p>
+
+    </aside>
+
+</section>
+
+
+
+
+
+<div id="error-message" class="error"></div>
+<!-- NO SHIPPING -->
+<script>
+(function() {
+  var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_GlTIUGlb1v1Db2');
+  checkoutButton.addEventListener('mouseup', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GlTIUGlb1v1Db2', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: 'https://www.tenoclockbooks.com/thanks',
+      cancelUrl: 'https://www.tenoclockbooks.com/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+
 
       
 
