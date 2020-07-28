@@ -111,6 +111,7 @@
       // https://stripe.com/docs/payments/checkout/fulfillment
       successUrl: 'https://www.tenoclockbooks.com/thanks',
       cancelUrl: 'https://www.tenoclockbooks.com/canceled',
+      billingAddressCollection: 'required',
     })
     .then(function (result) {
       if (result.error) {
@@ -141,6 +142,9 @@
       // https://stripe.com/docs/payments/checkout/fulfillment
       successUrl: 'https://www.tenoclockbooks.com/thanks',
       cancelUrl: 'https://www.tenoclockbooks.com/canceled',
+      billingAddressCollection: 'required',
+      // shippingAddressCollection: 'required',
+
     })
     .then(function (result) {
       if (result.error) {
