@@ -7,7 +7,7 @@ tags: home
 
 ## _Fisherwomen_ by Craig Easton
 
-### ![Fisherwomen](/assets/images/hero_fisherwomen.jpg)
+### ![Fisherwomen](/assets/images/hero_fisherwomen4.jpg)
 
 __A twenty-four page 11&quot; &times; 15&quot; portfolio publication__, Craig Easton's _Fisherwomen_ showcases images from a long-term project exploring the traditional and contemporary importance of women to the fishing industry.
 
