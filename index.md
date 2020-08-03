@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Upcoming photo book available to pre-order"
+title: "In stock and available to purchase..."
 shipping: false
 tags: home
 ---

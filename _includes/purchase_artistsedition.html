@@ -1,17 +1,17 @@
 <section class="purchase">
-  <h3 class="purchase--heading">Pre-order purchase Artist Edition</h3>
+  <h3 class="purchase--heading">Purchase Artist Edition</h3>
     <div class="purchase-info">
       {% for item in site.data.books %} <!-- Get everything in the books file -->
-        <h4 class="purchase--price"><strong>£{{ item.unit_price_special }}</strong> plus shipping</h4>
-        <p class="purchase--action"><button id="checkout-button-sku_Gm7SWsQW0UaOch" role="link" class="buy">Buy now – UK<small>(plus £5 UK shipping)</small></button></p>
-        <p class="purchase--action"><button id="checkout-button-sku_Gm8Hh4C81u9Lq7" role="link" class="buy">Buy now – International<small>(plus £14.95 International shipping)</small></button></p>
+        <!-- <h4 class="purchase--price"><strong>£{{ item.unit_price_special }}</strong> plus shipping</h4> -->
+        <p class="purchase--action"><button id="checkout-button-sku_Gm7SWsQW0UaOch" role="link" class="buy">Buy now – UK<small>(£180 inc. P&P)</small></button></p>
+        <p class="purchase--action"><button id="checkout-button-sku_Gm8Hh4C81u9Lq7" role="link" class="buy">Buy now – International<small>(£189.95 inc. P&P)</small></button></p>
 
       {% endfor %}
       </div>
       <aside class="purchase-meta">
         <h4 class="purchase-meta--header">Further info</h4>
-        <p>This Artist Edition is limited to 50 editions.</p>
-        <p>Publication is estimated to ship in May-June 2020.</p>
+        <p>This Artist Edition is limited to 50 editions and includes: <i>Fisherwomen</i> edition, print, and a hard cover case.</p>
+        <p>Publication is in stock and ready to ship.</p>
 
       </aside>
 
