@@ -40,6 +40,10 @@
 
       {% include purchase_noshipping.html %}
 
+      {% elsif page.shipping == true and page.tags contains "test" %}
+
+        {% include purchase_portfolioedition_test.html %}
+
       {% elsif page.shipping == true and page.tags contains "portfolioedition" %}
 
         {% include purchase_portfolioedition.html %}

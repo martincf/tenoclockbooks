@@ -1,0 +1,102 @@
+  <section class="purchase">
+    <h3 class="purchase--heading">**TEST Purchase Portfolio Edition**</h3>
+    <p>This page is for testing transactions only</p>
+    <div class="purchase-info">
+      {% for item in site.data.books %} <!-- Get everything in the books file -->
+        <!-- <h4 class="purchase--price"><strong>£{{ item.unit_price }}</strong> plus shipping (limited edition of 450).</h4> -->
+        <p class="purchase--action"><button id="checkout-button-sku_GlS4daIzAFmr6x" role="link" class="buy">Buy now – UK<small>(£23 inc. P&P)</small></button></p>
+        <p class="purchase--action"><button id="checkout-button-sku_GlSJ1jKhNAq9Ch" role="link" class="buy">Buy now – International <small>(£32.95 inc. P&P)</small></button></p>
+      {% endfor %}
+      <p class="poweredby">
+        <img src="{{ p.url | prepend: site.baseurl }}/assets/images/powered_by_stripe@2x.png" alt="Payments powered by Stripe" />
+      </p>
+    </div>
+    <aside class="purchase-meta">
+      <h4 class="purchase-meta--header">Further info</h4>
+      <p>Limited to 500 editions</p>
+      <p class="purchase--deliveryest">An exclusive <strong>Artists Edition</strong> (boxed with a beautiful signed print) is also <a href="/fisherwomen_artists_edition">available here</a>.</p>
+      <p>Publication is in stock and ready to ship.</p>
+
+    </aside>
+</section>
+</div>
+
+
+
+<div id="error-message" class="error"></div>
+<!-- UK -->
+<script>
+(function() {
+  var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_GlS4daIzAFmr6x');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GlS4daIzAFmr6x', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: 'https://www.tenoclockbooks.com/thanks',
+      cancelUrl: 'https://www.tenoclockbooks.com/canceled',
+      billingAddressCollection: 'required',
+      shippingAddressCollection: {
+        allowedCountries: [
+        'UK','US', 'CA'
+        'AL', 'AD', 'AM', 'AT', 'BY', 'BE', 'BA', 'BG', 'CH', 'CY', 'CZ', 'DE',
+                'DK', 'EE', 'ES', 'FO', 'FI', 'FR', 'GB', 'GE', 'GI', 'GR', 'HU', 'HR',
+                'IE', 'IS', 'IT', 'LI', 'LT', 'LU', 'LV', 'MC', 'MK', 'MT', 'NO', 'NL', 'PL',
+                'PT', 'RO', 'RU', 'SE', 'SI', 'SK', 'SM', 'TR', 'UA', 'VA',
+                'HK', 'CN', 'IN', 'IL', 'JP', 'PK', 'KR', 'TR',
+                'AR', 'BO', 'BR', 'CL', 'CO', 'EC', 'FK', 'GF', 'GY', 'PY', 'PE', 'SR', 'UY', 'VE'
+            );
+        ],
+      }
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+<!-- International -->
+<script>
+(function() {
+  var stripe = Stripe('pk_live_Nr6cMArk6PU4EcOk38vAWQQe008LxRlbPs');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_GlSJ1jKhNAq9Ch');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GlSJ1jKhNAq9Ch', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: 'https://www.tenoclockbooks.com/thanks',
+      cancelUrl: 'https://www.tenoclockbooks.com/canceled',
+      billingAddressCollection: 'required',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
