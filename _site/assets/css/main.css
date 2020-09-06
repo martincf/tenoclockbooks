@@ -55,6 +55,8 @@ main p { word-spacing: -2px; }
 
 @media (max-width: 480px) { main p { text-align: left; } }
 
+.review li { margin: 1em 0; }
+
 .product { max-width: 90%; }
 
 .product:before, .product:after { content: " "; display: table; }
