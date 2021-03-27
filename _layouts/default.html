@@ -1,6 +1,6 @@
 {% include head.html %}
   <body>
-    <div class="content-wrap">
+    <div class="header-wrap">
       <header class="header">
         <h1 class="title"><a href="/"><img class="title--logo" src="{{ p.url | prepend: site.baseurl }}/assets/images/logo-tenoclockbooks.png" alt="Ten O'Clock Books" /></a></h1>
         <section class="follow">
@@ -16,6 +16,8 @@
           </ul>
         </section>
       </header>
+    </div>
+
       <!-- <section class="hero">
         Hero area
       </section> -->
@@ -24,12 +26,11 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="64wUnRhz"></script>
     <main class="content">
 
-      <p class="statement">
-        {{ page.title }}
-      </p>
-
       <section class="content-intro">
-      {{ content }}
+        <p class="statement">
+          {{ page.title }}
+        </p>
+        {{ content }}
       {% if page.shipping == false and page.tags contains "home" %}
         <div class="purchase--wrap">
           <button class="purchase-link"><a class="purchase-link--anchor" href="/fisherwomen_portfolio_edition">Portfolio edition</a></button>
@@ -54,7 +55,6 @@
 
       </section>
     </main>
-    </div>
 
 <!--End mc_embed_signup-->
   {% include footer.html %}

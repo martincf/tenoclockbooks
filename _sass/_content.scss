@@ -38,11 +38,12 @@ a {
   text-decoration: underline;
 }
 .content {
-
 }
 .content-intro {
-  max-width: 480px;
-  margin:  0 auto;
+  max-width: 80%;
+  margin: 30% auto 0;
+  background-color: transparentize($backgroundColor,0.1);
+
   h3 {
     font-weight: 700;
     font-size: 1.2em;

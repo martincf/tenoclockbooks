@@ -45,7 +45,7 @@ p strong { font-weight: 700; }
 
 a { text-decoration: underline; }
 
-.content-intro { max-width: 480px; margin: 0 auto; }
+.content-intro { max-width: 80%; margin: 30% auto 0; background-color: rgba(255, 255, 254, 0.9); }
 
 .content-intro h3 { font-weight: 700; font-size: 1.2em; margin: 25px 0 0; }
 
@@ -131,11 +131,9 @@ body { background: #fffffe; color: #222; font-family: "DM Sans", sans-serif; fon
 
 h1, h2, h3, h4, h5, h6, strong, b { font-weight: 500; }
 
-body { text-align: left; }
+body { text-align: left; background-image: url(/assets/images/fisherwomen_hero3_dark.jpg), linear-gradient(180deg, #080708, #171518); background-size: 100%; background-position: 0 100px, 0 0; background-attachment: fixed; background-repeat: no-repeat; }
 
-.header { background: transparent url(/assets/images/fisherwomen_hero3.jpg) 0 0 no-repeat; min-height: 500px; background-size: cover; background-position: 0 0; padding: 50px 10%; }
-
-.hero { min-height: 500px; border: 1px solid red; background-color: rgba(255, 0, 0, 0.15); }
+.header { padding: 40px 10%; min-height: 50px; }
 
 .title { border: none; float: left; height: 50px; }
 
