@@ -1,18 +1,41 @@
+// Product pages
 .product {
-  max-width: 90%;
+  background-image: none, linear-gradient(180deg, #080708, #171518);
+}
+.content-intro {
+  margin: 50px auto 0;
+  background-color: transparentize($backgroundColor,0.1);
+  max-width: 55em;
+  padding: 50px;
+}
+.content-intro--content {
   @include cf();
-  h2 {
-    text-align: center;
+}
+.statement {
+  clear: both;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.2;
+  color: $red;
+  margin: 1em auto 0;
+  font-weight: 700;
+  max-width: 100%;
+  @include mq(narrow) {
+    margin-top: 25px;
   }
-  .content-intro--content > p img {
-    float: left;
-    width: 50%;
-    max-width: 480px;
-    margin: 0 25px 25px 0;
-    @include mq(small) {
-      width: 100%;
-      margin: 25px 0;
-      max-width: 100%;
-    }
+}
+.statement + section > p {
+  margin-top: 50px;
+}
+
+main p {
+  word-spacing: -2px;
+  @include mq(narrow) {
+    text-align: left;
+  }
+}
+.review {
+  li {
+    margin: 1em 0;
   }
 }

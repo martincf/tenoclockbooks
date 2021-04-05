@@ -1,14 +1,14 @@
 ---
 layout: product
 title: "Portfolio Edition"
-bgimg: fisherwomen_hero1
+bgimg: hero_landscape
 shipping: true
 tags: product,portfolioedition
 ---
 
 ## _Fisherwomen_ by Craig Easton
 
-![Fisherwomen spread](/assets/images/layouts_long.jpg)
+<!-- ![Fisherwomen spread](/assets/images/layouts_long.jpg) -->
 
 __A twenty-four page 11&quot; &times; 15&quot; portfolio publication__, Fisherwomen is both an exploration and a celebration of the long tradition of women in fishing, presented in three parts: _Contemporary Portraits_, _Heritage_ and _Journey_.
 

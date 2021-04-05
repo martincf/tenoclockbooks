@@ -1,5 +1,4 @@
 .purchase--wrap {
-  // margin: 0 auto;
   display: flex;
   @include cf();
 }
@@ -32,8 +31,6 @@
 
 .purchase {
   text-align: left;
-  border-top: 12px solid lighten($red,45%);
-  // max-width: 640px;
   margin: 25px auto 0;
   padding: 25px 0 0;
   @include cf();

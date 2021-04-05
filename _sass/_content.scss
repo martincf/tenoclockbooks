@@ -57,37 +57,24 @@ a {
     text-align: right;
     padding-right: .5em;
   }
-}
-
-
-
-// Product pages
-.content-intro--content {
-  @include cf();
-}
-.statement {
-  font-size: 1em;
-  line-height: 1.2;
-  color: $red;
-  margin: 0 0 0;
-  font-weight: 700;
-  max-width: 100%;
-  @include mq(narrow) {
-    margin-top: 25px;
-  }
-}
-.statement + section > p {
-  margin-top: 50px;
-}
-
-main p {
-  word-spacing: -2px;
-  @include mq(narrow) {
-    text-align: left;
-  }
-}
-.review {
-  li {
-    margin: 1em 0;
+  .cta-strip--sticker {
+    position: absolute;
+    min-width: 0 !important;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    top: -120px;
+    left: 8%;
+    background-color: $red;
+    color: white;
+    text-align: center;
+    transform: rotate(-5deg);
+    box-shadow: 0 5px 0 transparentize($bodyColor,0.95);
+    strong {
+      display: inline-block;
+      line-height: 1.2;
+      margin-top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }
