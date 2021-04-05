@@ -1,13 +1,12 @@
 ---
 layout: product
 title: "Artists Edition"
+productimg: FISHERWOMEN_Artists_edition_02b.jpg
 shipping: true
 tags: artistsedition
 ---
 
 ## _Fisherwomen_ by Craig Easton
-
-![Fisherwomen artist edition](/assets/images/layouts_artistedition.jpg)
 
 __Strictly limited to 50 editions__, this twenty-four page portfolio comes in a bespoke embossed hard case along with with an original 12&quot; &times; 16&quot; print of _The hands that gut the herring_ and a signed & numbered certificate of authenticity.
 

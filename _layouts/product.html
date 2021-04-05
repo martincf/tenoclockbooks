@@ -9,7 +9,10 @@
 
       <section class="content-intro">
         <div class="content-intro--content">
-      {{ content }}
+          <section class="content-intro--images">
+            {% include carousel.html %}
+          </section>
+          {{ content }}
         </div>
       {% if page.shipping == false and page.tags contains "noshipping" %}
       {% include purchase_noshipping.html %}

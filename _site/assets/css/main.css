@@ -49,7 +49,7 @@ a { text-decoration: underline; }
 
 .cta-strip h2 { text-align: right; padding-right: .5em; }
 
-.cta-strip .cta-strip--sticker { position: absolute; min-width: 0 !important; width: 150px; height: 150px; border-radius: 100%; top: -120px; left: 8%; background-color: #ed1a35; color: white; text-align: center; transform: rotate(-5deg); box-shadow: 0 5px 0 rgba(34, 34, 34, 0.05); }
+.cta-strip .cta-strip--sticker { font-size: 14px; position: absolute; min-width: 0 !important; width: 150px; height: 150px; border-radius: 100%; top: -120px; left: 8%; background-color: #ed1a35; color: white; text-align: center; transform: rotate(-5deg); box-shadow: 0 5px 0 rgba(34, 34, 34, 0.05); }
 
 .cta-strip .cta-strip--sticker strong { display: inline-block; line-height: 1.2; margin-top: 50%; transform: translateY(-50%); }
 
@@ -61,7 +61,13 @@ a { text-decoration: underline; }
 
 .content-intro--content:after { clear: both; }
 
-.statement { clear: both; text-align: center; font-size: 1em; line-height: 1.2; color: #ed1a35; margin: 1em auto 0; font-weight: 700; max-width: 100%; }
+.content-intro--content .content-intro--images img { max-height: 500px; display: block; margin: 0px auto 50px; }
+
+.content-intro--content > p, .content-intro--content > h3 { max-width: 40em; margin: .5em auto .5em; }
+
+.content-intro--content h2 { margin: 2em auto 2em; text-align: center; }
+
+.statement { clear: both; text-align: center; font-size: 1.5em; line-height: 1.2; color: #ed1a35; margin: 1em auto 0; font-weight: 700; max-width: 100%; }
 
 @media (max-width: 480px) { .statement { margin-top: 25px; } }
 
@@ -72,6 +78,20 @@ main p { word-spacing: -2px; }
 @media (max-width: 480px) { main p { text-align: left; } }
 
 .review li { margin: 1em 0; }
+
+.slider { text-align: left; overflow: hidden; }
+
+.slides { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+
+.slides::-webkit-scrollbar { width: 10px; height: 12px; }
+
+.slides::-webkit-scrollbar-thumb { background: rgba(34, 34, 34, 0.25); border-radius: 10px; }
+
+.slides::-webkit-scrollbar-track { background: transparent; }
+
+.slides > div { scroll-snap-align: center; flex-shrink: 0; margin-right: 70px; transform-origin: center center; transform: scale(1); transition: transform 0.5s; position: relative; display: flex; justify-content: center; align-items: center; font-size: 100px; }
+
+.slides > div:target { transform: scale(0.8); }
 
 footer { margin: 50px auto 25px; display: none; }
 
