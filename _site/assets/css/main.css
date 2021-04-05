@@ -27,16 +27,6 @@ img { max-width: 100%; height: auto; border: 0; }
 
 .content { min-height: 100%; position: relative; }
 
-.content-intro--content:before, .content-intro--content:after { content: " "; display: table; }
-
-.content-intro--content:after { clear: both; }
-
-.statement { font-size: 1em; line-height: 1.2; color: #ed1a35; margin: 0 0 0; font-weight: 700; max-width: 100%; }
-
-@media (max-width: 480px) { .statement { margin-top: 25px; } }
-
-.statement + section > p { margin-top: 50px; }
-
 h2 { font-family: adobe-caslon-pro, serif; font-size: 1.75em; margin: 0 0; padding-top: 10px; }
 
 @media (max-width: 800px) { h2 { line-height: 1.2; font-size: 1.75em; } }
@@ -53,13 +43,21 @@ p strong { font-weight: 700; }
 
 a { text-decoration: underline; }
 
-.content-intro { position: absolute; display: flex; width: 100%; margin: 0 0 0; box-sizing: border-box; bottom: 0; padding: 20px; background-color: rgba(255, 255, 254, 0.9); }
+.cta-strip { position: absolute; display: flex; width: 100%; margin: 0 0 0; box-sizing: border-box; bottom: 0; padding: 20px; background-color: rgba(255, 255, 254, 0.9); }
 
-.content-intro > * { border: 1px solid green; background-color: rgba(0, 128, 0, 0.15); }
+.cta-strip > * { min-width: 50%; box-sizing: border-box; }
 
-.content-intro h3 { font-weight: 700; font-size: 1.2em; margin: 0 0 0; }
+.cta-strip h2 { text-align: right; padding-right: .5em; }
 
-.content-intro h3 img { display: block; width: 100%; max-width: 480px; margin: 50px 50px 50px 0; }
+.content-intro--content:before, .content-intro--content:after { content: " "; display: table; }
+
+.content-intro--content:after { clear: both; }
+
+.statement { font-size: 1em; line-height: 1.2; color: #ed1a35; margin: 0 0 0; font-weight: 700; max-width: 100%; }
+
+@media (max-width: 480px) { .statement { margin-top: 25px; } }
+
+.statement + section > p { margin-top: 50px; }
 
 main p { word-spacing: -2px; }
 
@@ -89,11 +87,13 @@ footer { margin: 50px auto 25px; display: none; }
 
 .logomark:hover { transform: scale(1.2); }
 
+.purchase--wrap { display: flex; }
+
 .purchase--wrap:before, .purchase--wrap:after { content: " "; display: table; }
 
 .purchase--wrap:after { clear: both; }
 
-.purchase-link { float: left; width: 46%; background-color: #ed1a35; margin: 0 2%; box-sizing: border-box; transition: all .2s ease-in-out; }
+.purchase-link { float: left; background-color: #ed1a35; margin: 0 2%; box-sizing: border-box; border-radius: 2px; transition: all .2s ease-in-out; }
 
 .purchase-link:hover { transform: scale(1.05); }
 
@@ -173,7 +173,7 @@ body { background: #fffffe; color: #222; font-family: "DM Sans", sans-serif; fon
 
 h1, h2, h3, h4, h5, h6, strong, b { font-weight: 500; }
 
-body { text-align: left; background-image: url(/assets/images/fisherwomen_hero1.jpg), linear-gradient(180deg, #080708, #171518); background-size: 70%,100%; background-position: center center, 0 0; background-attachment: fixed; background-repeat: no-repeat; }
+body { text-align: left; background-image: url(/assets/images/fisherwomen_hero3_dark.jpg), linear-gradient(180deg, #080708, #171518); background-size: 70%,100%; background-position: center center, 0 0; background-attachment: fixed; background-repeat: no-repeat; }
 
 .header { padding: 40px 10%; min-height: 50px; }
 

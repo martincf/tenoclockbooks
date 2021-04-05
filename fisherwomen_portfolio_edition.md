@@ -1,6 +1,7 @@
 ---
 layout: product
 title: "Portfolio Edition"
+bgimg: fisherwomen_hero1
 shipping: true
 tags: product,portfolioedition
 ---

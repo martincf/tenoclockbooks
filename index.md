@@ -2,6 +2,7 @@
 layout: default
 title: "In stock and available to purchase..."
 subtitle: "Fisherwomen by Craig Easton"
+bgimg: fisherwomen_hero3_dark
 shipping: false
 tags: home
 ---

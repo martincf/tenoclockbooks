@@ -1,27 +1,8 @@
+// Universal
 .content {
   min-height: 100%;
   position: relative;
 }
-.content-intro--content {
-  @include cf();
-}
-
-.statement {
-  font-size: 1em;
-  line-height: 1.2;
-  color: $red;
-  margin: 0 0 0;
-  font-weight: 700;
-
-  max-width: 100%;
-  @include mq(narrow) {
-    margin-top: 25px;
-  }
-}
-.statement + section > p {
-  margin-top: 50px;
-}
-
 h2 {
   font-family: $headerFont;
   font-size: 1.75em;
@@ -53,18 +34,19 @@ p {
     font-weight: 700;
   }
 }
-
 a {
   text-decoration: underline;
 }
 
-.content-intro {
+
+// Homepage
+.cta-strip {
   > *  {
-    @include show(green);
+    min-width: 50%;
+    box-sizing: border-box;
   }
   position: absolute;
   display: flex;
-
   width: 100%;
   margin: 0 0 0;
   box-sizing: border-box;
@@ -72,23 +54,32 @@ a {
   padding: 20px;
   background-color: transparentize($backgroundColor,0.1);
   h2 {
-  }
-  h3 {
-    font-weight: 700;
-    font-size: 1.2em;
-    margin: 0 0 0;
-  }
-  h3 img {
-    display: block;
-    width: 100%;
-    max-width: 480px;
-    margin: 50px 50px 50px 0;
-
-  }
-  p {
-
+    text-align: right;
+    padding-right: .5em;
   }
 }
+
+
+
+// Product pages
+.content-intro--content {
+  @include cf();
+}
+.statement {
+  font-size: 1em;
+  line-height: 1.2;
+  color: $red;
+  margin: 0 0 0;
+  font-weight: 700;
+  max-width: 100%;
+  @include mq(narrow) {
+    margin-top: 25px;
+  }
+}
+.statement + section > p {
+  margin-top: 50px;
+}
+
 main p {
   word-spacing: -2px;
   @include mq(narrow) {
