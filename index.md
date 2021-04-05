@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Limited edition available to purchase..."
+title: "Limited edition"
 subtitle: "Fisherwomen by Craig Easton"
 bgimg: fisherwomen_hero3_dark
 shipping: false
