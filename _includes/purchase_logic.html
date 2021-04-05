@@ -1,0 +1,7 @@
+{% if page.shipping == true and page.tags contains "portfolioedition" %}
+  {% include purchase_portfolioedition.html %}
+
+{% elsif page.shipping == true and page.tags contains "artistsedition" %}
+  {% include purchase_artistsedition.html %}
+
+{% endif %}

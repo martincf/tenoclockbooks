@@ -57,17 +57,15 @@ a { text-decoration: underline; }
 
 .content-intro { margin: 50px auto 0; background-color: rgba(255, 255, 254, 0.9); max-width: 55em; padding: 50px; }
 
+.content-intro--content { max-width: 40em; margin: 0 auto; }
+
 .content-intro--content:before, .content-intro--content:after { content: " "; display: table; }
 
 .content-intro--content:after { clear: both; }
 
-.content-intro--content .content-intro--images img { max-height: 500px; display: block; margin: 0px auto 50px; }
-
-.content-intro--content > p, .content-intro--content > h3 { max-width: 40em; margin: .5em auto .5em; }
-
 .content-intro--content h2 { margin: 2em auto 2em; text-align: center; }
 
-.statement { clear: both; text-align: center; font-size: 1.5em; line-height: 1.2; color: #ed1a35; margin: 1em auto 0; font-weight: 700; max-width: 100%; }
+.statement { clear: both; text-align: center; font-size: 1.5em; line-height: 1.2; color: #fffffe; margin: 1em auto 0; font-weight: 700; max-width: 100%; }
 
 @media (max-width: 480px) { .statement { margin-top: 25px; } }
 
@@ -79,19 +77,21 @@ main p { word-spacing: -2px; }
 
 .review li { margin: 1em 0; }
 
-.slider { text-align: left; overflow: hidden; }
+.slider { margin: 50px 0; text-align: left; overflow: hidden; }
 
-.slides { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+.slides { background-color: white; border: 15px solid white; display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
 
-.slides::-webkit-scrollbar { width: 10px; height: 12px; }
+.slides::-webkit-scrollbar { width: 10px; height: 12px; margin: 15px; }
 
-.slides::-webkit-scrollbar-thumb { background: rgba(34, 34, 34, 0.25); border-radius: 10px; }
+.slides::-webkit-scrollbar-thumb { background: rgba(34, 34, 34, 0.25); border-radius: 0; }
 
 .slides::-webkit-scrollbar-track { background: transparent; }
 
-.slides > div { scroll-snap-align: center; flex-shrink: 0; margin-right: 70px; transform-origin: center center; transform: scale(1); transition: transform 0.5s; position: relative; display: flex; justify-content: center; align-items: center; font-size: 100px; }
+.slides > div { scroll-snap-align: center; flex-shrink: 0; margin-right: 50px; transform-origin: center center; transform: scale(1); transition: transform 0.5s; position: relative; display: flex; justify-content: center; align-items: center; }
 
 .slides > div:target { transform: scale(0.8); }
+
+.slide img { border: 15px solid white; max-height: 350px; display: inline-block; margin-bottom: 50px; }
 
 footer { margin: 50px auto 25px; display: none; }
 
@@ -121,7 +121,7 @@ footer { margin: 50px auto 25px; display: none; }
 
 .purchase-link--anchor { padding: .5em; display: block; color: #fff; font-weight: 700; text-decoration: none; }
 
-.purchase { text-align: left; margin: 25px auto 0; padding: 25px 0 0; }
+.purchase { background-color: white; text-align: left; margin: 50px auto 0; padding: 25px; }
 
 .purchase:before, .purchase:after { content: " "; display: table; }
 
