@@ -5,18 +5,17 @@
   text-align: left;
   overflow: hidden;
 }
-
 .slides {
   background-color: white;
   border: 15px solid white;
   display: flex;
   overflow-x: auto;
-
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  // scroll-snap-type: x proximity;
+  // scroll-behavior: smooth;
+  // -webkit-overflow-scrolling: touch;
   // scroll-snap-points-x: repeat(300px);
-  // scroll-snap-type: mandatory;
+  // scroll-snap-type: proximity;
+  // scroll-padding: 50%;
 }
 .slides::-webkit-scrollbar {
   width: 10px;
@@ -26,58 +25,33 @@
 .slides::-webkit-scrollbar-thumb {
   background: transparentize($bodyColor,0.75);
   border-radius: 0;
-
-
 }
 .slides::-webkit-scrollbar-track {
   background: transparent;
 }
 .slides > div {
-  scroll-snap-align: center;
-  flex-shrink: 0;
-  margin-right: 50px;
-  transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.5s;
-  position: relative;
-
+  // scroll-snap-align: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-shrink: 0;
+  margin-right: 25px;
+  // transform-origin: center center;
+  // transform: scale(1);
+  // transition: transform 0.5s;
+  // position: relative;
+  // justify-content: center;
+  // align-items: center;
   // font-size: 100px;
 }
-.slides > div:target {
-   transform: scale(0.8);
+// .slides > div:target {
+//    transform: scale(0.8);
+// }
+.slide {
+  // @include show(red);
 }
 .slide img {
   border: 15px solid white;
   max-height: 350px;
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 
 }
-// .slider > a {
-//   display: inline-flex;
-//   width: 1.5rem;
-//   height: 1.5rem;
-//   background: white;
-//   text-decoration: none;
-//   align-items: center;
-//   justify-content: center;
-//   border-radius: 50%;
-//   margin: 0 0 0.5rem 0;
-//   position: relative;
-// }
-// .slider > a:active {
-//   top: 1px;
-// }
-// .slider > a:focus {
-//   background: #000;
-// }
-
-// /* Don't need button navigation */
-// @supports (scroll-snap-type) {
-//   .slider > a {
-//     display: none;
-//   }
-// }
