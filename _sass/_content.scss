@@ -1,12 +1,32 @@
+.content {
+  min-height: 100%;
+  position: relative;
+}
 .content-intro--content {
   @include cf();
 }
+
+.statement {
+  font-size: 1em;
+  line-height: 1.2;
+  color: $red;
+  margin: 0 0 0;
+  font-weight: 700;
+
+  max-width: 100%;
+  @include mq(narrow) {
+    margin-top: 25px;
+  }
+}
+.statement + section > p {
+  margin-top: 50px;
+}
+
 h2 {
-  text-align: center;
   font-family: $headerFont;
-  font-size: 2.25em;
-  margin: 25px 0 50px;
-  padding-top: 50px;
+  font-size: 1.75em;
+  margin: 0 0;
+  padding-top: 10px;
   @include mq(small) {
     line-height: 1.2;
     font-size: 1.75em;
@@ -37,17 +57,26 @@ p {
 a {
   text-decoration: underline;
 }
-.content {
-}
-.content-intro {
-  max-width: 80%;
-  margin: 30% auto 0;
-  background-color: transparentize($backgroundColor,0.1);
 
+.content-intro {
+  > *  {
+    @include show(green);
+  }
+  position: absolute;
+  display: flex;
+
+  width: 100%;
+  margin: 0 0 0;
+  box-sizing: border-box;
+  bottom: 0;
+  padding: 20px;
+  background-color: transparentize($backgroundColor,0.1);
+  h2 {
+  }
   h3 {
     font-weight: 700;
     font-size: 1.2em;
-    margin: 25px 0 0;
+    margin: 0 0 0;
   }
   h3 img {
     display: block;

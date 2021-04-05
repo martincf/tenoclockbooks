@@ -6,9 +6,13 @@
         "mixins",
         "content",
         "product",
-        "purchase";
+        "footer",
+        "purchase",
+        "mailchimp";
 
-
+html, body {
+  height:100%;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -30,9 +34,9 @@ h1, h2, h3, h4, h5, h6, strong, b {
 // -- temp styles -- //
 body {
   text-align: left;
-  background-image: url(/assets/images/fisherwomen_hero3_dark.jpg), linear-gradient(180deg, #080708, #171518);
-  background-size: 100%;
-  background-position: 0 100px, 0 0;
+  background-image: url(/assets/images/fisherwomen_hero1.jpg), linear-gradient(180deg, #080708, #171518);
+  background-size: 70%,100%;
+  background-position: center center, 0 0;
   background-attachment: fixed;
   background-repeat: no-repeat;
   @include mq(small) {
@@ -54,7 +58,7 @@ body {
   }
 }
 .title--logo {
-  max-width: 225px;
+  max-width: 175px;
   border: none;
   @include transition();
   &:hover {
@@ -92,10 +96,10 @@ body {
 .follow--links li {
   display: inline-block;
   max-height: 48px;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 .follow--icon {
-  max-height: 36px;
+  max-height: 24px;
   margin: 0;
   @include transition();
   &:hover {
@@ -103,115 +107,11 @@ body {
   }
 }
 
-.statement {
-  font-size: 1.5em;
-  line-height: 1.2;
-  color: $red;
-  margin: 100px 0 0;
-  text-align: center;
-  font-weight: 700;
-  max-width: 100%;
-  @include mq(narrow) {
-    margin-top: 25px;
-  }
-}
-.statement + section > p {
-  margin-top: 50px;
-}
-footer {
-  margin: 50px auto 25px;
-  border-top: 2px solid #ddd;
-}
-.footer--copyright {
-  max-width: 640px;
-  text-align: center;
-  margin: 25px auto 25px;
-  font-size: .8em;
-  @include mq(small) {
-    max-width: 80%;
-  }
-}
-.logomark {
-  max-width: 64px;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  @include transition();
-  &:hover {
-    transform: scale(1.2);
-  }
-
-}
-
 .error {
   margin: 0 50px;
   font-weight: 700;
 }
-//Mailchimp Form
-.mc_signup {
-  text-align: center;
-  margin: 25px auto 0;
-  padding: 0;
-  h2 {
-    font-size: 1em;
-    font-weight: 700;
-    display: inline-block;
-    margin: 0 1em 0 0;
-    padding-top: 0;
-    font-family: $bodyFont;
-  }
-}
-.mc_signup--elements {
-  display: inline-block;
-}
-.mc_signup--elements * {
-  display: inline-block;
-  color: $red;
-  vertical-align: middle;
 
-  @include mq(small) {
-    display: block;
-    margin: 25px auto;
-    text-align: center;
-  }
-  input {
-    background-color: lighten($red,45%);
-    border: 1px solid $red;
-    border: none;
-    padding: .5em .5em .25em;
-    font-size: 1em;
-    font-family: $bodyFont;
-    line-height: 1;
-    color: $bodyColor;
-    &::placeholder {
-      color: lighten($red,25%);
-    }
-    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: lighten($red,25%);
-    }
-    &::-ms-input-placeholder { /* Microsoft Edge */
-      color: lighten($red,25%);
-    }
-
-  }
-  .clear {}
-  .button {
-    color: $red;
-    background-color: #fff;
-    border: 1px solid $red;
-    font-weight: 700;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: .9em;
-    padding: .5em 1em .35em;
-    @include transition();
-    &:hover {
-      transform: scale(1.05);
-    }
-
-  }
-}
 .alert {
   margin: 25px 0 50px;
   padding: 25px 25px;

@@ -1,12 +1,12 @@
 .purchase--wrap {
-  margin: 25px auto;
+  // margin: 0 auto;
   @include cf();
 }
 .purchase-link {
   float: left;
   width: 46%;
   background-color: $red;
-  margin: 25px 2%;
+  margin: 0 2%;
   box-sizing: border-box;
   @include transition();
   &:hover {

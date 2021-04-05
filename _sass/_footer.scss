@@ -1,0 +1,25 @@
+footer {
+  margin: 50px auto 25px;
+  display: none;
+}
+.footer--copyright {
+  max-width: 640px;
+  text-align: center;
+  margin: 25px auto 25px;
+  font-size: .8em;
+  @include mq(small) {
+    max-width: 80%;
+  }
+}
+.logomark {
+  max-width: 64px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  @include transition();
+  &:hover {
+    transform: scale(1.2);
+  }
+
+}

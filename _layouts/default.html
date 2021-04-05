@@ -1,62 +1,42 @@
 {% include head.html %}
   <body>
-    <div class="header-wrap">
-      <header class="header">
-        <h1 class="title"><a href="/"><img class="title--logo" src="{{ p.url | prepend: site.baseurl }}/assets/images/logo-tenoclockbooks.png" alt="Ten O'Clock Books" /></a></h1>
-        <section class="follow">
-          <ul class="follow--links">
-            <li>
-              <a href="https://www.instagram.com/tenoclockbooks">
-                <img class="follow--icon" src="{{ p.url | prepend: site.baseurl }}/assets/images/icon--instagram.png" alt="Instagram" /></a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/tenoclockbooks">
-                <img class="follow--icon" src="{{ p.url | prepend: site.baseurl }}/assets/images/icon--facebook.png" alt="Facebook" /></a>
-            </li>
-          </ul>
-        </section>
-      </header>
-    </div>
-
-      <!-- <section class="hero">
-        Hero area
-      </section> -->
-
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="64wUnRhz"></script>
     <main class="content">
 
+    {% include header.html %}
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="64wUnRhz"></script>
+
       <section class="content-intro">
-        <p class="statement">
+        <!-- <p class="statement">
           {{ page.title }}
-        </p>
+        </p> -->
         {{ content }}
-      {% if page.shipping == false and page.tags contains "home" %}
-        <div class="purchase--wrap">
-          <button class="purchase-link"><a class="purchase-link--anchor" href="/fisherwomen_portfolio_edition">Portfolio edition</a></button>
-          <button class="purchase-link"><a class="purchase-link--anchor" href="/fisherwomen_artists_edition">Artists edition</a></button>
-        </div>
 
-      {% elsif page.shipping == true and page.tags contains "noshipping" %}
+        {% if page.shipping == false and page.tags contains "home" %}
+          <div class="purchase--wrap">
+            <button class="purchase-link"><a class="purchase-link--anchor" href="/fisherwomen_portfolio_edition">Buy Portfolio edition</a></button>
+            <button class="purchase-link"><a class="purchase-link--anchor" href="/fisherwomen_artists_edition">Buy Artists edition</a></button>
+          </div>
 
-        {% include purchase_noshipping.html %}
+        {% elsif page.shipping == true and page.tags contains "noshipping" %}
 
-      {% elsif page.shipping == true and page.tags contains "portfolioedition" %}
+          {% include purchase_noshipping.html %}
 
-        {% include purchase_portfolioedition.html %}
+        {% elsif page.shipping == true and page.tags contains "portfolioedition" %}
 
-      {% elsif page.shipping == true and page.tags contains "artistsedition" %}
+          {% include purchase_portfolioedition.html %}
 
-        {% include purchase_artistsedition.html %}
+        {% elsif page.shipping == true and page.tags contains "artistsedition" %}
 
-      {% endif %}
+          {% include purchase_artistsedition.html %}
 
-      {% include reviews.html %}
+        {% endif %}
 
+      <!-- {% include reviews.html %} -->
       </section>
+
+      {% include footer.html %}
     </main>
 
-<!--End mc_embed_signup-->
-  {% include footer.html %}
   </body>
 </html>
