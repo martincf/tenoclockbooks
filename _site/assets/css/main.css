@@ -57,13 +57,13 @@ a { text-decoration: underline; }
 
 .content-intro { margin: 50px auto 0; background-color: rgba(255, 255, 254, 0.9); max-width: 55em; padding: 50px; }
 
+.content-intro h2 { margin: 1em auto 2em; text-align: center; }
+
 .content-intro--content { max-width: 40em; margin: 0 auto; }
 
 .content-intro--content:before, .content-intro--content:after { content: " "; display: table; }
 
 .content-intro--content:after { clear: both; }
-
-.content-intro--content h2 { margin: 2em auto 2em; text-align: center; }
 
 .statement { clear: both; text-align: center; font-size: 1.5em; line-height: 1.2; color: #fffffe; margin: 1em auto 0; font-weight: 700; max-width: 100%; }
 
@@ -93,9 +93,9 @@ main p { word-spacing: -2px; }
 
 .slide img { border: 15px solid white; max-height: 350px; display: inline-block; margin-bottom: 50px; }
 
-footer { margin: 50px auto 25px; display: none; }
+footer { margin: 50px auto 25px; }
 
-.footer--copyright { max-width: 640px; text-align: center; margin: 25px auto 25px; font-size: .8em; }
+.footer--copyright { max-width: 640px; text-align: center; margin: 25px auto 25px; padding-bottom: 50px; color: #fffffe; font-size: .8em; }
 
 @media (max-width: 800px) { .footer--copyright { max-width: 80%; } }
 
@@ -121,7 +121,7 @@ footer { margin: 50px auto 25px; display: none; }
 
 .purchase-link--anchor { padding: .5em; display: block; color: #fff; font-weight: 700; text-decoration: none; }
 
-.purchase { background-color: white; text-align: left; margin: 50px auto 0; padding: 25px; }
+.purchase { border-top: 1px solid #a2a2a2; text-align: left; margin: 50px auto 0; padding: 25px; }
 
 .purchase:before, .purchase:after { content: " "; display: table; }
 
@@ -191,7 +191,7 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: 500; }
 
 body { text-align: left; background-size: 70%,100%; background-position: center center, 0 0; background-attachment: fixed; background-repeat: no-repeat; }
 
-body.default { background-image: url(/assets/images/fisherwomen_hero3_dark.jpg), linear-gradient(180deg, #080708, #171518); }
+body.default { background-image: url(/assets/images/fisherwomen_hero1.jpg), linear-gradient(180deg, #080708, #171518); }
 
 .header { padding: 40px 10%; min-height: 50px; }
 

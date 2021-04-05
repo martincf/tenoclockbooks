@@ -1,11 +1,13 @@
 footer {
   margin: 50px auto 25px;
-  display: none;
+  // display: none;
 }
 .footer--copyright {
   max-width: 640px;
   text-align: center;
   margin: 25px auto 25px;
+  padding-bottom: 50px;
+  color: $backgroundColor;
   font-size: .8em;
   @include mq(small) {
     max-width: 80%;

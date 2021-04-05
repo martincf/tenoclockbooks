@@ -42,7 +42,7 @@ body {
   @include mq(small) {
   }
 &.default {
-  background-image: url(/assets/images/fisherwomen_hero3_dark.jpg), linear-gradient(180deg, #080708, #171518);
+  background-image: url(/assets/images/fisherwomen_hero1.jpg), linear-gradient(180deg, #080708, #171518);
 }
 }
 

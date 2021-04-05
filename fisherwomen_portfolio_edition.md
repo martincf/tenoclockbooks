@@ -1,12 +1,11 @@
 ---
 layout: product
 title: "Fisherwomen by Craig Easton"
+subtitle: "Portfolio edition"
 productimg: [fwflat-14.jpg,hero_fisherwomen.jpg,hero_fisherwomen2.jpg,hero_fisherwomen3.jpg,hero_fisherwomen4.jpg,fwheritage.jpg,fwjourney1.jpg,fwjourney2.jpg]
 shipping: true
 tags: product,portfolioedition
 ---
-
-## Portfolio Edition
 
 __A twenty-four page 11&quot; &times; 15&quot; portfolio publication__, Fisherwomen is both an exploration and a celebration of the long tradition of women in fishing, presented in three parts: _Contemporary Portraits_, _Heritage_ and _Journey_.
 
