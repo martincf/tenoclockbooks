@@ -11,6 +11,13 @@
     margin: 1em auto 2em;
     text-align: center;
   }
+  a:link, a:visited, a:hover, a:active {
+    color: $red;
+    text-decoration: none;
+  }
+  a:hover {
+    color: darken($red,20%);
+  }
 }
 .content-intro--content {
   @include cf();
@@ -41,10 +48,5 @@ main p {
 
   @include mq(narrow) {
     text-align: left;
-  }
-}
-.review {
-  li {
-    margin: 1em 0;
   }
 }

@@ -1,0 +1,31 @@
+.reviews {
+  border-top: 1px solid lighten($bodyColor,50%);
+  margin: 25px auto 0;
+  max-width: 40em;
+  padding: 50px;
+  h2 {
+    text-align: center;
+  }
+}
+.review {
+  li {
+    margin: 1em 0;
+    font-size: 15px;
+
+    &:before {
+        content: "\2022";
+        float: left;
+        text-align: right;
+        margin: 0 0 0 -2.5em;
+        width: 2em;
+        font-size: 16px;
+        color: $red;
+    }
+  }
+}
+.fb-video {
+  margin: 25px auto;
+}
+.review-contact {
+  margin: 25px 0;
+}
