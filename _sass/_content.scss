@@ -8,8 +8,6 @@
   @include mq(small) {
     // @include show(green);
   }
-
-
 }
 h2 {
   font-family: $headerFont;
@@ -28,7 +26,11 @@ h2 {
 }
 h3 {
   font-weight: 500;
-  font-size: 1.5em;
+  margin: 50px 0 25px;
+  text-align: left;
+  word-spacing: -1px;
+  font-size: 1.1em;
+  color: lighten($bodyColor, 50%);
   @include mq(small) {
     line-height: 1.2;
     font-size: 1.25em;

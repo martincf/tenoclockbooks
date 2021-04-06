@@ -1,6 +1,7 @@
 ---
 layout: product
-title: "Fisherwomen by Craig Easton"
+title: "Fisherwomen"
+artist: "Craig Easton"
 subtitle: "Artists Edition"
 productimg: [FISHERWOMEN_Artists_edition_01.jpg,FISHERWOMEN_Artists_edition_02b.jpg,hands.jpg,hero_fisherwomen.jpg,hero_fisherwomen2.jpg,hero_fisherwomen3.jpg,hero_fisherwomen4.jpg,fwheritage.jpg,fwjourney1.jpg,fwjourney2.jpg]
 shipping: true

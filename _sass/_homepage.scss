@@ -1,6 +1,14 @@
-body.default {
-  background-image: url(/assets/images/fisherwomen_hero1.jpg), $backgroundColor;
+.default {
+  text-align: left;
+  background-size: 70%,100%;
+  background-position: center center, 0 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/fisherwomen_hero1.jpg);
+  @include mq(small) {
+    background-size: 90%,100%;
   }
+}
 .cta-strip {
   > *  {
     min-width: 50%;
@@ -8,12 +16,11 @@ body.default {
   }
   position: absolute;
   display: flex;
-  width: 80%;
-  left: 10%;
+  width: 100%;
   margin: 0 0 0;
   box-sizing: border-box;
   bottom: 0;
-  padding: 20px;
+  padding: 20px 10%;
   background-color: transparentize($backgroundColor,0.1);
   @include mq(small) {
     display: block;
@@ -37,7 +44,7 @@ body.default {
     height: 120px;
     border-radius: 100%;
     top: -80px;
-    left: -5%;
+    left: 5%;
     background-color: $red;
     color: white;
     text-align: center;

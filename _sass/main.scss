@@ -21,7 +21,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: $backgroundColor;
+  background-color: #f7f7f7;
   color: $bodyColor;
   font-family: $bodyFont;
   font-weight: 500;
@@ -36,35 +36,9 @@ h1, h2, h3, h4, h5, h6, strong, b {
 
 
 // -- temp styles -- //
-body {
-  text-align: left;
-  background-size: 70%,100%;
-  background-position: center center, 0 0;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  @include mq(small) {
-    background-size: 90%,100%;
-  }
-}
+
 
 .error {
   margin: 0 50px;
   font-weight: 700;
-}
-
-.alert {
-  margin: 25px 0 50px;
-  padding: 25px 25px;
-  border: 3px double $red;
-  background-color: lighten($red,47%);
-  h1 {
-    margin: 0 0 1em;
-    text-transform: uppercase;
-    color: darken($red,10%);
-    font-weight: 700;
-    font-size: .8em;
-    letter-spacing: 2px;
-  }
-  p {
-  }
 }

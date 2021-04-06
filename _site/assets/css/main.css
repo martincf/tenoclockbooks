@@ -49,9 +49,11 @@ img { max-width: 100%; height: auto; border: 0; }
 
 .follow--icon:hover { transform: scale(1.05); }
 
-body.default { background-image: url(/assets/images/fisherwomen_hero1.jpg), #fffffe; }
+.default { text-align: left; background-size: 70%,100%; background-position: center center, 0 0; background-attachment: fixed; background-repeat: no-repeat; background-image: url(/assets/images/fisherwomen_hero1.jpg); }
 
-.cta-strip { position: absolute; display: flex; width: 80%; left: 10%; margin: 0 0 0; box-sizing: border-box; bottom: 0; padding: 20px; background-color: rgba(255, 255, 254, 0.9); }
+@media (max-width: 859px) { .default { background-size: 90%,100%; } }
+
+.cta-strip { position: absolute; display: flex; width: 100%; margin: 0 0 0; box-sizing: border-box; bottom: 0; padding: 20px 10%; background-color: rgba(255, 255, 255, 0.9); }
 
 .cta-strip > * { min-width: 50%; box-sizing: border-box; }
 
@@ -61,7 +63,7 @@ body.default { background-image: url(/assets/images/fisherwomen_hero1.jpg), #fff
 
 @media (max-width: 859px) { .cta-strip h2 { text-align: center; margin-bottom: .5em; } }
 
-.cta-strip .cta-strip--sticker { font-size: 14px; position: absolute; min-width: 0 !important; width: 120px; height: 120px; border-radius: 100%; top: -80px; left: -5%; background-color: #ed1a35; color: white; text-align: center; transform: rotate(-5deg); box-shadow: 0 5px 0 rgba(34, 34, 34, 0.05); }
+.cta-strip .cta-strip--sticker { font-size: 14px; position: absolute; min-width: 0 !important; width: 120px; height: 120px; border-radius: 100%; top: -80px; left: 5%; background-color: #ed1a35; color: white; text-align: center; transform: rotate(-5deg); box-shadow: 0 5px 0 rgba(34, 34, 34, 0.05); }
 
 .cta-strip .cta-strip--sticker strong { display: inline-block; line-height: 1.2; margin-top: 50%; transform: translateY(-50%); }
 
@@ -73,7 +75,7 @@ h2 { font-family: adobe-caslon-pro, serif; font-size: 1.75em; margin: 0 0; paddi
 
 @media (max-width: 480px) { h2 { padding-top: 25px; margin-bottom: 25px; font-size: 2em; } }
 
-h3 { font-weight: 500; font-size: 1.5em; }
+h3 { font-weight: 500; margin: 50px 0 25px; text-align: left; word-spacing: -1px; font-size: 1.1em; color: #a2a2a2; }
 
 @media (max-width: 859px) { h3 { line-height: 1.2; font-size: 1.25em; margin: 0 0 .5em; } }
 
@@ -83,9 +85,7 @@ p strong { font-weight: 700; }
 
 a { text-decoration: underline; }
 
-.product { background-image: none, linear-gradient(180deg, #080708, #171518); }
-
-.content-intro { margin: 50px auto 0; background-color: rgba(255, 255, 254, 0.95); max-width: 55em; padding: 50px; }
+.content-intro { margin: 50px auto 0; background-color: rgba(255, 255, 255, 0.95); max-width: 55em; padding: 50px; }
 
 .content-intro h2 { margin: 1em auto 2em; text-align: center; }
 
@@ -99,7 +99,7 @@ a { text-decoration: underline; }
 
 .content-intro--content:after { clear: both; }
 
-.statement { clear: both; text-align: center; font-size: 1.5em; line-height: 1.2; color: #fffffe; margin: 1em auto 0; font-weight: 700; max-width: 100%; }
+.statement { clear: both; text-align: center; font-size: 1.5em; line-height: 1.2; color: #222; margin: 1em auto 0; font-weight: 700; max-width: 100%; }
 
 @media (max-width: 480px) { .statement { margin-top: 25px; } }
 
@@ -197,7 +197,7 @@ main p { word-spacing: -2px; }
 
 footer { margin: 50px auto 25px; }
 
-.footer--copyright { max-width: 640px; text-align: center; margin: 25px auto 25px; padding-bottom: 50px; color: #fffffe; font-size: .8em; }
+.footer--copyright { max-width: 640px; text-align: center; margin: 25px auto 25px; padding-bottom: 50px; color: #ffffff; font-size: .8em; }
 
 @media (max-width: 859px) { .footer--copyright { max-width: 80%; } }
 
@@ -231,18 +231,10 @@ html, body { height: 100%; }
 
 html { scroll-behavior: smooth; }
 
-body { background: #fffffe; color: #222; font-family: "DM Sans", sans-serif; font-weight: 500; font-style: normal; font-size: 1.1em; line-height: 1.5; }
+body { background-color: #f7f7f7; color: #222; font-family: "DM Sans", sans-serif; font-weight: 500; font-style: normal; font-size: 1.1em; line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6, strong, b { font-weight: 500; }
 
-body { text-align: left; background-size: 70%,100%; background-position: center center, 0 0; background-attachment: fixed; background-repeat: no-repeat; }
-
-@media (max-width: 859px) { body { background-size: 90%,100%; } }
-
 .error { margin: 0 50px; font-weight: 700; }
-
-.alert { margin: 25px 0 50px; padding: 25px 25px; border: 3px double #ed1a35; background-color: #fef8f9; }
-
-.alert h1 { margin: 0 0 1em; text-transform: uppercase; color: #c50f27; font-weight: 700; font-size: .8em; letter-spacing: 2px; }
 
 /*# sourceMappingURL=main.css.map */

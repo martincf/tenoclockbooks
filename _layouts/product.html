@@ -5,7 +5,7 @@
       <div id="fb-root"></div>
       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="64wUnRhz"></script>
       <p class="statement">
-        {{ page.title }}
+        {{ page.title }} by {{ page.artist }}
       </p>
 
       <section class="content-intro">
@@ -14,14 +14,19 @@
         {% include purchase_logic.html %}
         <div class="content-intro--content">
           {{ content }}
+          {% for artist in site.data.artists %}
+            {% if artist.name == page.artist %}
+              <h3>About {{ artist.name }}</h3>
+              {{ artist.bio | markdownify }}
+            {% endif %}
+          {% endfor %}
+
         </div>
 
         {% include reviews.html %}
 
       </section>
     </main>
-
-<!--End mc_embed_signup-->
   {% include footer.html %}
   </body>
 </html>
