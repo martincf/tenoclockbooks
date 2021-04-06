@@ -8,7 +8,7 @@
   background-color: $red;
   margin: 0 2%;
   box-sizing: border-box;
-  border-radius: 2px;
+  border-radius: 3px;
   @include transition();
   &:hover {
     transform: scale(1.05);
@@ -32,6 +32,7 @@
 .purchase {
   // background-color: white;
   border-top: 1px solid lighten($bodyColor,50%);
+  border-bottom: 1px solid lighten($bodyColor,50%);
   text-align: left;
   margin: 50px auto 0;
   padding: 25px;
@@ -93,10 +94,13 @@
   border-radius: 1px;
   width: 100%;
   font-weight: 700;
+  border-radius: 3px;
+
     @include transition();
   &:hover {
     transform: scale(1.03);
     background-color: #ed1a35;
+    box-shadow: 0 5px 0 transparentize($bodyColor,0.9);
   }
   small {
     font-size: .7em;

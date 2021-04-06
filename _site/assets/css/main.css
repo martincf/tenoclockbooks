@@ -55,7 +55,7 @@ a { text-decoration: underline; }
 
 .product { background-image: none, linear-gradient(180deg, #080708, #171518); }
 
-.content-intro { margin: 50px auto 0; background-color: rgba(255, 255, 254, 0.9); max-width: 55em; padding: 50px; }
+.content-intro { margin: 50px auto 0; background-color: rgba(255, 255, 254, 0.95); max-width: 55em; padding: 50px; }
 
 .content-intro h2 { margin: 1em auto 2em; text-align: center; }
 
@@ -93,7 +93,7 @@ main p { word-spacing: -2px; }
 
 .slide img { border: 15px solid white; max-height: 350px; display: inline-block; margin-bottom: 25px; }
 
-.reviews { border-top: 1px solid #a2a2a2; margin: 25px auto 0; max-width: 40em; padding: 50px; }
+.reviews { margin: 0 auto 0; max-width: 40em; padding: 50px; }
 
 .reviews h2 { text-align: center; }
 
@@ -111,7 +111,7 @@ main p { word-spacing: -2px; }
 
 .purchase--wrap:after { clear: both; }
 
-.purchase-link { float: left; background-color: #ed1a35; margin: 0 2%; box-sizing: border-box; border-radius: 2px; transition: all .2s ease-in-out; }
+.purchase-link { float: left; background-color: #ed1a35; margin: 0 2%; box-sizing: border-box; border-radius: 3px; transition: all .2s ease-in-out; }
 
 .purchase-link:hover { transform: scale(1.05); }
 
@@ -123,7 +123,7 @@ main p { word-spacing: -2px; }
 
 .purchase-link--anchor { padding: .5em; display: block; color: #fff; font-weight: 700; text-decoration: none; }
 
-.purchase { border-top: 1px solid #a2a2a2; text-align: left; margin: 50px auto 0; padding: 25px; }
+.purchase { border-top: 1px solid #a2a2a2; border-bottom: 1px solid #a2a2a2; text-align: left; margin: 50px auto 0; padding: 25px; }
 
 .purchase:before, .purchase:after { content: " "; display: table; }
 
@@ -147,9 +147,9 @@ main p { word-spacing: -2px; }
 
 @media (max-width: 480px) { .purchase--action { display: block; text-align: center; } }
 
-.buy { background-color: #ed1a35; color: white; display: inline-block; padding: .5em; border-radius: 1px; width: 100%; font-weight: 700; transition: all .2s ease-in-out; }
+.buy { background-color: #ed1a35; color: white; display: inline-block; padding: .5em; border-radius: 1px; width: 100%; font-weight: 700; border-radius: 3px; transition: all .2s ease-in-out; }
 
-.buy:hover { transform: scale(1.03); background-color: #ed1a35; }
+.buy:hover { transform: scale(1.03); background-color: #ed1a35; box-shadow: 0 5px 0 rgba(34, 34, 34, 0.1); }
 
 .buy small { font-size: .7em; font-weight: 400; display: block; }
 
