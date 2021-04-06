@@ -1,10 +1,10 @@
 .default {
   text-align: left;
-  background-size: 70%,100%;
+  background-size: 80%,100%;
   background-position: center center, 0 0;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-image: url(/assets/images/hero_landscape.jpg);
+  background-image: url(/assets/images/fw-comp.png);
   @include mq(small) {
     background-size: 90%,100%;
   }
@@ -27,7 +27,7 @@
     font-size: smaller;
   }
   @include mq(narrow) {
-    
+
   }
   h2 {
     text-align: center;

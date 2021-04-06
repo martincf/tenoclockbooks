@@ -4,10 +4,11 @@
 .content-intro {
   margin: 50px auto 0;
   background-color: transparentize($backgroundColor,0.05);
-  max-width: 55em;
+  max-width: 50em;
   padding: 50px;
   @include mq(small) {
     padding: 25px;
+    max-width: 40em;
   }
   h2 {
     margin: 1em auto 2em;
