@@ -25,6 +25,46 @@ button { overflow: visible; font: inherit; cursor: pointer; letter-spacing: inhe
 
 img { max-width: 100%; height: auto; border: 0; }
 
+.header { padding: 40px 10%; min-height: 50px; }
+
+.title { border: none; float: left; height: 50px; }
+
+@media (max-width: 480px) { .title { float: none; height: auto; } }
+
+.title--logo { max-width: 175px; border: none; transition: all .2s ease-in-out; }
+
+.title--logo:hover { transform: scale(1.05); }
+
+@media (max-width: 480px) { .title--logo { display: block; margin: 0 auto; } }
+
+.follow { float: right; height: 50px; }
+
+@media (max-width: 480px) { .follow { vertical-align: middle; float: none; text-align: center; display: block; margin: 50px auto 0; height: inherit; } }
+
+.follow--header { font-size: .7em; text-transform: uppercase; border-top: none; padding-top: 0; letter-spacing: 1px; float: left; }
+
+.follow--links li { display: inline-block; max-height: 48px; margin: 0 10px; }
+
+.follow--icon { max-height: 24px; margin: 0; transition: all .2s ease-in-out; }
+
+.follow--icon:hover { transform: scale(1.05); }
+
+body.default { background-image: url(/assets/images/fisherwomen_hero1.jpg), #fffffe; }
+
+.cta-strip { position: absolute; display: flex; width: 80%; left: 10%; margin: 0 0 0; box-sizing: border-box; bottom: 0; padding: 20px; background-color: rgba(255, 255, 254, 0.9); }
+
+.cta-strip > * { min-width: 50%; box-sizing: border-box; }
+
+@media (max-width: 859px) { .cta-strip { display: block; font-size: smaller; } }
+
+.cta-strip h2 { text-align: center; padding-right: .5em; }
+
+@media (max-width: 859px) { .cta-strip h2 { text-align: center; margin-bottom: .5em; } }
+
+.cta-strip .cta-strip--sticker { font-size: 14px; position: absolute; min-width: 0 !important; width: 120px; height: 120px; border-radius: 100%; top: -80px; left: -5%; background-color: #ed1a35; color: white; text-align: center; transform: rotate(-5deg); box-shadow: 0 5px 0 rgba(34, 34, 34, 0.05); }
+
+.cta-strip .cta-strip--sticker strong { display: inline-block; line-height: 1.2; margin-top: 50%; transform: translateY(-50%); }
+
 .content { min-height: 100%; position: relative; }
 
 h2 { font-family: adobe-caslon-pro, serif; font-size: 1.75em; margin: 0 0; padding-top: 10px; }
@@ -42,20 +82,6 @@ p { margin: 0 0 .5em; word-spacing: -30%; }
 p strong { font-weight: 700; }
 
 a { text-decoration: underline; }
-
-.cta-strip { position: absolute; display: flex; width: 100%; margin: 0 0 0; box-sizing: border-box; bottom: 0; padding: 20px; background-color: rgba(255, 255, 254, 0.9); }
-
-.cta-strip > * { min-width: 50%; box-sizing: border-box; }
-
-@media (max-width: 859px) { .cta-strip { display: block; font-size: smaller; } }
-
-.cta-strip h2 { text-align: right; padding-right: .5em; }
-
-@media (max-width: 859px) { .cta-strip h2 { text-align: center; margin-bottom: .5em; } }
-
-.cta-strip .cta-strip--sticker { font-size: 14px; position: absolute; min-width: 0 !important; width: 150px; height: 150px; border-radius: 100%; top: -120px; left: 8%; background-color: #ed1a35; color: white; text-align: center; transform: rotate(-5deg); box-shadow: 0 5px 0 rgba(34, 34, 34, 0.05); }
-
-.cta-strip .cta-strip--sticker strong { display: inline-block; line-height: 1.2; margin-top: 50%; transform: translateY(-50%); }
 
 .product { background-image: none, linear-gradient(180deg, #080708, #171518); }
 
@@ -211,31 +237,7 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: 500; }
 
 body { text-align: left; background-size: 70%,100%; background-position: center center, 0 0; background-attachment: fixed; background-repeat: no-repeat; }
 
-body.default { background-image: url(/assets/images/fisherwomen_hero1.jpg), linear-gradient(180deg, #080708, #171518); }
-
-.header { padding: 40px 10%; min-height: 50px; }
-
-.title { border: none; float: left; height: 50px; }
-
-@media (max-width: 480px) { .title { float: none; height: auto; } }
-
-.title--logo { max-width: 175px; border: none; transition: all .2s ease-in-out; }
-
-.title--logo:hover { transform: scale(1.05); }
-
-@media (max-width: 480px) { .title--logo { display: block; margin: 0 auto; } }
-
-.follow { float: right; height: 50px; }
-
-@media (max-width: 480px) { .follow { vertical-align: middle; float: none; text-align: center; display: block; margin: 50px auto 0; height: inherit; } }
-
-.follow--header { font-size: .7em; text-transform: uppercase; border-top: none; padding-top: 0; letter-spacing: 1px; float: left; }
-
-.follow--links li { display: inline-block; max-height: 48px; margin: 0 10px; }
-
-.follow--icon { max-height: 24px; margin: 0; transition: all .2s ease-in-out; }
-
-.follow--icon:hover { transform: scale(1.05); }
+@media (max-width: 859px) { body { background-size: 90%,100%; } }
 
 .error { margin: 0 50px; font-weight: 700; }
 

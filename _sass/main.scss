@@ -4,6 +4,8 @@
         "colors",
         "typography",
         "mixins",
+        "header",
+        "homepage",
         "content",
         "product",
         "carousel",
@@ -41,72 +43,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   @include mq(small) {
-  }
-&.default {
-  background-image: url(/assets/images/fisherwomen_hero1.jpg), linear-gradient(180deg, #080708, #171518);
-}
-}
-
-.header {
-  padding: 40px 10%;
-  min-height: 50px;
-}
-.title {
-  border: none;
-  float: left;
-  height: 50px;
-  @include mq(narrow) {
-    float: none;
-    height: auto;
-  }
-}
-.title--logo {
-  max-width: 175px;
-  border: none;
-  @include transition();
-  &:hover {
-    transform: scale(1.05);
-  }
-  @include mq(narrow) {
-    display: block;
-    margin: 0 auto;
-  }
-}
-.follow {
-  float: right;
-  height: 50px;
-  @include mq(narrow) {
-    vertical-align: middle;
-    float: none;
-    text-align: center;
-    display: block;
-    margin: 50px auto 0;
-    height: inherit;
-  }
-}
-.follow--header {
-  font-size: .7em;
-  text-transform: uppercase;
-  border-top: none;
-  padding-top: 0;
-  letter-spacing: 1px;
-  // margin: 25px 0 0;
-  float: left;
-}
-.follow--links {
-  // margin: 25px 0;
-}
-.follow--links li {
-  display: inline-block;
-  max-height: 48px;
-  margin: 0 10px;
-}
-.follow--icon {
-  max-height: 24px;
-  margin: 0;
-  @include transition();
-  &:hover {
-    transform: scale(1.05);
+    background-size: 90%,100%;
   }
 }
 
