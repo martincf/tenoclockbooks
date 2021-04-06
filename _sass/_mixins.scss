@@ -55,7 +55,7 @@
 		}
 	}
 	@else if $point==small {
-		@media (max-width: 800px) {
+		@media (max-width: 859px) {
 			@content;
 		}
 	}
