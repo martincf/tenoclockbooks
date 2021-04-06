@@ -7,6 +7,9 @@
     text-align: center;
     max-width: 80%;
   }
+  @include mq(narrow) {
+    display: block;
+  }
 }
 .purchase-link {
   float: left;
@@ -18,7 +21,6 @@
   @include transition();
   @include mq(small) {
     float: none;
-
   }
   &:hover {
     transform: scale(1.05);
@@ -63,12 +65,13 @@
     margin-right: 0;
   }
 }
-.purchase-meta {
-
-}
 .purchase-meta--header {
   font-weight: 700;
   margin-bottom: 1em;
+  @include mq(narrow) {
+    margin: 2em 0 1em;
+
+  }
 }
 .purchase--heading {
   font-weight: 700;
@@ -76,6 +79,10 @@
   line-height: 1.2;
   color: $red;
   margin: 0 0 25px;
+  @include mq(narrow) {
+    font-size: 1.2em;
+    text-align: center;
+  }
 }
 .purchase--price {
   strong {

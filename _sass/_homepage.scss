@@ -4,7 +4,7 @@
   background-position: center center, 0 0;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-image: url(/assets/images/fisherwomen_hero1.jpg);
+  background-image: url(/assets/images/hero_landscape.jpg);
   @include mq(small) {
     background-size: 90%,100%;
   }
@@ -20,13 +20,14 @@
   margin: 0 0 0;
   box-sizing: border-box;
   bottom: 0;
-  padding: 20px 10%;
+  padding: 20px 1.5%;
   background-color: transparentize($backgroundColor,0.1);
   @include mq(small) {
     display: block;
     font-size: smaller;
   }
   @include mq(narrow) {
+    
   }
   h2 {
     text-align: center;
@@ -35,8 +36,12 @@
       text-align: center;
       margin-bottom: .5em;
     }
+    @include mq(narrow) {
+
+    }
   }
   .cta-strip--sticker {
+    display: none;
     font-size: 14px;
     position: absolute;
     min-width: 0 !important;

@@ -2,6 +2,9 @@
   margin: 0 auto 0;
   max-width: 40em;
   padding: 50px;
+  @include mq(narrow) {
+    padding: 15px;
+  }
   h2 {
     text-align: center;
   }
@@ -24,6 +27,7 @@
 }
 .fb-video {
   margin: 25px auto;
+  width: 100%;
 }
 .review-contact {
   margin: 25px 0;

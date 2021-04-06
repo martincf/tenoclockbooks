@@ -60,7 +60,7 @@
 		}
 	}
 	@else if $point==narrow {
-		@media (max-width: 480px) {
+		@media (max-width: 520px) {
 			@content;
 		}
 	}

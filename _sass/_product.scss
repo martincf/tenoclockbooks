@@ -6,9 +6,15 @@
   background-color: transparentize($backgroundColor,0.05);
   max-width: 55em;
   padding: 50px;
+  @include mq(small) {
+    padding: 25px;
+  }
   h2 {
     margin: 1em auto 2em;
     text-align: center;
+    @include mq(small) {
+      margin: 0;
+    }
   }
   a:link, a:visited, a:hover, a:active {
     color: $red;
@@ -34,6 +40,10 @@
   margin: 1em auto 0;
   font-weight: 700;
   max-width: 100%;
+  @include mq(small) {
+    margin-top: 1.5em;
+    font-size: 1.2em;
+  }
   @include mq(narrow) {
     margin-top: 25px;
   }
