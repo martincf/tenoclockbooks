@@ -31,11 +31,11 @@
 
 .purchase {
   // background-color: white;
-  border-top: 1px solid lighten($bodyColor,50%);
+  // border-top: 1px solid lighten($bodyColor,50%);
   border-bottom: 1px solid lighten($bodyColor,50%);
   text-align: left;
-  margin: 50px auto 0;
-  padding: 25px;
+  margin: 50px auto;
+  padding: 0 25px 25px;
   @include cf();
   @include mq(narrow) {
     text-align: center;

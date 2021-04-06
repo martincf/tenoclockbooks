@@ -4,7 +4,6 @@
       {% include header.html %}
       <div id="fb-root"></div>
       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="64wUnRhz"></script>
-
       <p class="statement">
         {{ page.title }}
       </p>
@@ -12,10 +11,10 @@
       <section class="content-intro">
         <h2>{{ page.subtitle }}</h2>
         {% include carousel.html %}
+        {% include purchase_logic.html %}
         <div class="content-intro--content">
           {{ content }}
         </div>
-        {% include purchase_logic.html %}
 
         {% include reviews.html %}
 

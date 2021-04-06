@@ -99,7 +99,7 @@ main p { word-spacing: -2px; }
 
 .review li { margin: 1em 0; font-size: 15px; }
 
-.review li:before { content: "\2022"; float: left; text-align: right; margin: 0 0 0 -2.5em; width: 2em; font-size: 16px; color: #ed1a35; }
+.review li:before { content: "\2014"; float: left; text-align: right; margin: 0 0 0 -2.5em; width: 2em; font-size: 16px; color: #ed1a35; }
 
 .fb-video { margin: 25px auto; }
 
@@ -123,7 +123,7 @@ main p { word-spacing: -2px; }
 
 .purchase-link--anchor { padding: .5em; display: block; color: #fff; font-weight: 700; text-decoration: none; }
 
-.purchase { border-top: 1px solid #a2a2a2; border-bottom: 1px solid #a2a2a2; text-align: left; margin: 50px auto 0; padding: 25px; }
+.purchase { border-bottom: 1px solid #a2a2a2; text-align: left; margin: 50px auto; padding: 0 25px 25px; }
 
 .purchase:before, .purchase:after { content: " "; display: table; }
 
