@@ -15,3 +15,7 @@ This bespoke portfolio made on _Mohawk Superfine_ paper is presented in large fo
 Limited edition of 500, each individually signed and numbered by the artist.
 
 Each copy comes with _Fisherwomen & Photography_, a specially commissioned A5 four page insert written by Rachel Nordstrum, Photographic Collections Manager at the University of St Andrews.
+
+> It was awful big fishing one year... It was piled up for us to cut and we never saw the bottom of the farlan for three weeks.They kept on piling them up and up and up every day, but we made up for it when we went to the Palais at night. We had good times. Every Saturday night. Dancing.
+
+— Mary Williamson, _Fisherwomen_

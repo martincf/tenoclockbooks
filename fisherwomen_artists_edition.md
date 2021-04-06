@@ -15,3 +15,7 @@ Easton’s work is held in museum collections, archives and  private collection
 This is the only print from this series made in this size and is only available as part of the  _Artists Edition_ of fifty.
 
 As with the _Portfolio Edition_, the Artists Edition comes with _Fisherwomen & Photography_, a specially commissioned A5 four page insert written by Rachel Nordstrum, Photographic Collections Manager at the University of St Andrews.
+
+> It was travelling work. I gid tae Isle of Man, Lerwick, Lowestoft and Yarmouth and Jim’s mother gid tae Stornoway, Fraserburgh, Ireland. We had nothing. Nothing. We had nae showers, we had a basin and a tap outside with cauld water and of course your ‘three f ’s’ got washed every weekend and that was you. But we survived. No, I enjoyed it.
+
+— Rita McNab, _Fisherwomen_

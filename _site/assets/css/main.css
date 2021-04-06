@@ -93,6 +93,14 @@ a { text-decoration: underline; }
 
 @media (max-width: 859px) { .content-intro h2 { margin: 0; } }
 
+.content-intro blockquote { font-family: adobe-caslon-pro, serif; margin: 50px 2em 0; font-style: italic; font-size: larger; }
+
+.content-intro blockquote p:before { content: "\201c"; display: inline-block; margin-left: -.5em; padding-right: .25em; }
+
+.content-intro blockquote p:after { content: "\201d"; display: inline-block; margin-right: .5em; padding-left: -.25em; }
+
+.content-intro blockquote + p { font-family: adobe-caslon-pro, serif; margin: 25px 2em; }
+
 .content-intro a:link, .content-intro a:visited, .content-intro a:hover, .content-intro a:active { color: #ed1a35; text-decoration: none; }
 
 .content-intro a:hover { color: #950c1d; }
