@@ -1,0 +1,19 @@
+{% include head.html %}
+  <body class="{{ page.layout }}">
+    <main class="content">
+      {% include header.html %}
+      <p class="statement">
+        {{ page.title }}
+      </p>
+
+      <section class="content-intro">
+        <h2>{{ page.subtitle }}</h2>
+        <div class="content-intro--content">
+          {{ content }}
+        </div>
+        {% include purchase_special.html %}
+      </section>
+    </main>
+  {% include footer.html %}
+  </body>
+</html>
